@@ -2,8 +2,8 @@
 // Used by the React app (document titles on client navigation) and by
 // scripts/prerender.mjs (static <head>, sitemap.xml, JSON-LD).
 
-export const SITE_URL = 'https://www.condoclar.eu';
-export const APP_URL = 'https://condoclar.eu';
+export const SITE_URL = 'https://condoclar.eu';
+export const APP_URL = 'https://app.condoclar.eu';
 export const SITE_NAME = 'Condoclar';
 
 export interface PageMeta {
