@@ -52,7 +52,10 @@ export default function HomePage() {
             {copy.golden.map((step, i) => (
               <div className={`golden__step${i === 0 ? ' golden__step--why' : ''}`} key={step.label}>
                 <div className="golden__label">{step.label}</div>
-                <h3>{step.title}</h3>
+                <h3>
+                  {step.titleAccent && <span className="accent-underline">{step.titleAccent}</span>}
+                  {step.title}
+                </h3>
                 <p>{step.body}</p>
               </div>
             ))}

@@ -79,7 +79,8 @@ const pt: Copy = {
       },
       {
         label: 'O quê',
-        title: 'Com ou sem administração, uma casa tranquila para o seu condomínio',
+        titleAccent: 'Com ou sem administração',
+        title: ', uma casa tranquila para o seu condomínio',
         body: 'Reuniões, votações, orçamentos, quotas, obras, documentos, relatórios mensais e um diretório de fornecedores partilhado. Condóminos, comissões e administradores veem todos o mesmo retrato, em seis idiomas.',
       },
     ],

@@ -79,7 +79,8 @@ const fr: Copy = {
       },
       {
         label: 'Quoi',
-        title: 'Avec syndic ou autogérée, un foyer paisible pour votre copropriété',
+        titleAccent: 'Avec syndic ou autogérée',
+        title: ', un foyer paisible pour votre copropriété',
         body: 'Réunions, votes, budgets, charges, travaux, documents, rapports mensuels et un annuaire d’artisans partagé. Copropriétaires, conseils syndicaux et syndics voient tous la même image, en six langues.',
       },
     ],

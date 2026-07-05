@@ -79,7 +79,8 @@ const de: Copy = {
       },
       {
         label: 'Was',
-        title: 'Mit Verwaltung oder selbstverwaltet — ein ruhiges Zuhause für Ihre Gemeinschaft',
+        titleAccent: 'Mit Verwaltung oder selbstverwaltet',
+        title: ' — ein ruhiges Zuhause für Ihre Gemeinschaft',
         body: 'Versammlungen, Abstimmungen, Budgets, Hausgeld, Instandhaltung, Dokumente, Monatsberichte und ein geteiltes Handwerkerverzeichnis. Eigentümer, Beiräte und Verwaltung sehen alle dasselbe Bild, in sechs Sprachen.',
       },
     ],

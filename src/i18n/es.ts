@@ -79,7 +79,8 @@ const es: Copy = {
       },
       {
         label: 'Qué',
-        title: 'Con administrador o autogestionada, un hogar tranquilo para tu comunidad',
+        titleAccent: 'Con administrador o autogestionada',
+        title: ', un hogar tranquilo para tu comunidad',
         body: 'Juntas, votaciones, presupuestos, cuotas, obras, documentos, informes mensuales y un directorio de proveedores compartido. Propietarios, juntas y administradores ven la misma imagen, en seis idiomas.',
       },
     ],

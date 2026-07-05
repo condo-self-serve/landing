@@ -79,7 +79,8 @@ const it: Copy = {
       },
       {
         label: 'Cosa',
-        title: 'Con amministratore o autogestito, una casa serena per il tuo condominio',
+        titleAccent: 'Con amministratore o autogestito',
+        title: ', una casa serena per il tuo condominio',
         body: 'Assemblee, votazioni, bilanci, quote, lavori, documenti, report mensili e un elenco fornitori condiviso. Proprietari, consigli e amministratori vedono tutti lo stesso quadro, in sei lingue.',
       },
     ],

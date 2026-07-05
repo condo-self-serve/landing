@@ -80,7 +80,8 @@ const en: Copy = {
       },
       {
         label: 'What',
-        title: 'Managed or self-managed, one calm home for your condo',
+        titleAccent: 'Managed or self-managed',
+        title: ', one calm home for your condo',
         body: 'Meetings, votes, budgets, fees, maintenance jobs, documents, monthly reports and a shared vendor directory. Owners, committees and administrators all see the same picture, in six languages.',
       },
     ],

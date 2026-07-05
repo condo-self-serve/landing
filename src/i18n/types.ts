@@ -71,7 +71,9 @@ export interface Copy {
     whyTitle1: string;
     whyTitle2: string;
     whyLede: string;
-    golden: { label: string; title: string; body: string }[];
+    /** titleAccent, when set, is rendered before title with the golden
+     *  accent-underline highlight (same treatment as the hero). */
+    golden: { label: string; titleAccent?: string; title: string; body: string }[];
     peekEyebrow: string;
     peekTitle: string;
     peekAlt: string;
