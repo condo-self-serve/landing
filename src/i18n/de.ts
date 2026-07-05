@@ -70,17 +70,17 @@ const de: Copy = {
       {
         label: 'Warum',
         title: 'Weil ein gemeinsames Zuhause eine gemeinsame Stimme verdient',
-        body: 'Wir glauben: Die besten Gemeinschaften werden nicht verwaltet — sie werden eingeladen. Wenn alle sehen, sprechen und mit anpacken können, wird aus einem Gebäude eine Nachbarschaft.',
+        body: 'Wir glauben: Die besten Gemeinschaften werden nicht über die Köpfe der Menschen hinweg verwaltet — sie werden mit ihnen geführt. Wenn alle sehen, sprechen und mit anpacken können, wird aus einem Gebäude eine Nachbarschaft.',
       },
       {
         label: 'Wie',
         title: 'Indem alles sichtbar wird und jede Stimme zählt',
-        body: 'Transparente Budgets, die jeder lesen kann. Entscheidungen per Abstimmung, nicht durch den, der am lautesten war. Vertrauen, das zwischen benachbarten Gemeinschaften fließt — nicht von Fremden aus dem Internet.',
+        body: 'Transparente Budgets, die jeder lesen kann. Entscheidungen per Abstimmung, nicht durch den, der am lautesten war. Wenn Eigentümer die Arbeit sehen und die Verwaltung im Offenen arbeitet, fließt Vertrauen in beide Richtungen.',
       },
       {
         label: 'Was',
-        title: 'Ein ruhiges Zuhause für Ihre Eigentümergemeinschaft',
-        body: 'Versammlungen, Abstimmungen, Budgets, Hausgeld, Instandhaltung, Dokumente, Monatsberichte und ein Handwerkerverzeichnis, geteilt mit den Gemeinschaften um Sie herum. Alles an einem Ort, in sechs Sprachen — ob Ihre Gemeinschaft sich selbst verwaltet oder mit einer professionellen Hausverwaltung arbeitet.',
+        title: 'Mit Verwaltung oder selbstverwaltet — ein ruhiges Zuhause für Ihre Gemeinschaft',
+        body: 'Versammlungen, Abstimmungen, Budgets, Hausgeld, Instandhaltung, Dokumente, Monatsberichte und ein geteiltes Handwerkerverzeichnis. Eigentümer, Beiräte und Verwaltung sehen alle dasselbe Bild, in sechs Sprachen.',
       },
     ],
     peekEyebrow: 'Sehen Sie es in Aktion',

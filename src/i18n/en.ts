@@ -71,17 +71,17 @@ const en: Copy = {
       {
         label: 'Why',
         title: 'Because a shared home deserves a shared voice',
-        body: 'We believe the best communities aren’t managed — they’re invited. When everyone can see, everyone can speak, and everyone can help, a building becomes a neighbourhood.',
+        body: 'We believe the best communities aren’t managed at people; they’re run with them. When everyone can see, everyone can speak, and everyone can help, a building becomes a neighbourhood.',
       },
       {
         label: 'How',
         title: 'By making everything visible and every voice count',
-        body: 'Transparent budgets anyone can read. Decisions made by ballot, not by whoever shouted last. Trust that flows between neighbouring condos, not from strangers on the internet.',
+        body: 'Transparent budgets anyone can read. Decisions made by ballot, not by whoever shouted last. When owners can see the work and managers work in the open, trust flows both ways.',
       },
       {
         label: 'What',
-        title: 'One calm home for your condominium',
-        body: 'Meetings, votes, budgets, fees, maintenance jobs, documents, monthly reports and a vendor directory shared with the condos around you. Everything in one place, in six languages — whether your condo is self-managed or works with a professional administrator.',
+        title: 'Managed or self-managed, one calm home for your condo',
+        body: 'Meetings, votes, budgets, fees, maintenance jobs, documents, monthly reports and a shared vendor directory. Owners, committees and administrators all see the same picture, in six languages.',
       },
     ],
     peekEyebrow: 'See it working',

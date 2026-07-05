@@ -70,17 +70,17 @@ const es: Copy = {
       {
         label: 'Por qué',
         title: 'Porque un hogar compartido merece una voz compartida',
-        body: 'Creemos que las mejores comunidades no se administran: se invitan. Cuando todos pueden ver, todos pueden hablar y todos pueden ayudar, un edificio se convierte en un vecindario.',
+        body: 'Creemos que las mejores comunidades no se gestionan por encima de la gente; se llevan con ella. Cuando todos pueden ver, todos pueden hablar y todos pueden ayudar, un edificio se convierte en un vecindario.',
       },
       {
         label: 'Cómo',
         title: 'Haciendo todo visible y cada voz relevante',
-        body: 'Presupuestos transparentes que cualquiera puede leer. Decisiones por votación, no por quien gritó más fuerte. Confianza que fluye entre comunidades vecinas, no de desconocidos en internet.',
+        body: 'Presupuestos transparentes que cualquiera puede leer. Decisiones por votación, no por quien gritó más fuerte. Cuando los propietarios ven el trabajo y quien administra trabaja a la vista, la confianza fluye en ambos sentidos.',
       },
       {
         label: 'Qué',
-        title: 'Un hogar tranquilo para tu comunidad',
-        body: 'Reuniones, votaciones, presupuestos, cuotas, obras, documentos, informes mensuales y un directorio de proveedores compartido con las comunidades de alrededor. Todo en un solo lugar, en seis idiomas — tanto si tu comunidad se autogestiona como si trabaja con un administrador profesional.',
+        title: 'Con administrador o autogestionada, un hogar tranquilo para tu comunidad',
+        body: 'Juntas, votaciones, presupuestos, cuotas, obras, documentos, informes mensuales y un directorio de proveedores compartido. Propietarios, juntas y administradores ven la misma imagen, en seis idiomas.',
       },
     ],
     peekEyebrow: 'Míralo funcionando',

@@ -70,17 +70,17 @@ const it: Copy = {
       {
         label: 'Perché',
         title: 'Perché una casa condivisa merita una voce condivisa',
-        body: 'Crediamo che le comunità migliori non si amministrino: si invitino. Quando tutti possono vedere, tutti possono parlare e tutti possono dare una mano, un palazzo diventa un vicinato.',
+        body: 'Crediamo che le comunità migliori non si amministrino sopra le persone; si conducono con loro. Quando tutti possono vedere, tutti possono parlare e tutti possono dare una mano, un palazzo diventa un vicinato.',
       },
       {
         label: 'Come',
         title: 'Rendendo tutto visibile e ogni voce importante',
-        body: 'Bilanci trasparenti che chiunque può leggere. Decisioni prese col voto, non da chi ha urlato più forte. Fiducia che circola tra condomini vicini, non da sconosciuti su internet.',
+        body: 'Bilanci trasparenti che chiunque può leggere. Decisioni prese col voto, non da chi ha urlato più forte. Quando i proprietari vedono il lavoro e chi amministra lavora alla luce del sole, la fiducia scorre in entrambe le direzioni.',
       },
       {
         label: 'Cosa',
-        title: 'Una casa serena per il tuo condominio',
-        body: 'Assemblee, votazioni, bilanci, quote, lavori, documenti, report mensili e un elenco fornitori condiviso con i condomini intorno a te. Tutto in un unico posto, in sei lingue — che il condominio sia autogestito o segua un amministratore professionista.',
+        title: 'Con amministratore o autogestito, una casa serena per il tuo condominio',
+        body: 'Assemblee, votazioni, bilanci, quote, lavori, documenti, report mensili e un elenco fornitori condiviso. Proprietari, consigli e amministratori vedono tutti lo stesso quadro, in sei lingue.',
       },
     ],
     peekEyebrow: 'Guardalo all’opera',

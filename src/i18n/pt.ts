@@ -70,17 +70,17 @@ const pt: Copy = {
       {
         label: 'Porquê',
         title: 'Porque uma casa partilhada merece uma voz partilhada',
-        body: 'Acreditamos que as melhores comunidades não se gerem — convidam-se. Quando todos podem ver, todos podem falar e todos podem ajudar, um prédio torna-se uma vizinhança.',
+        body: 'Acreditamos que as melhores comunidades não se gerem por cima das pessoas; gerem-se com elas. Quando todos podem ver, todos podem falar e todos podem ajudar, um prédio torna-se uma vizinhança.',
       },
       {
         label: 'Como',
         title: 'Tornando tudo visível e cada voz relevante',
-        body: 'Orçamentos transparentes que qualquer pessoa lê. Decisões por voto, não por quem gritou mais alto. Confiança que circula entre condomínios vizinhos, não vinda de estranhos na internet.',
+        body: 'Orçamentos transparentes que qualquer pessoa lê. Decisões por voto, não por quem gritou mais alto. Quando os condóminos veem o trabalho e quem gere trabalha às claras, a confiança circula nos dois sentidos.',
       },
       {
         label: 'O quê',
-        title: 'Uma casa tranquila para o seu condomínio',
-        body: 'Reuniões, votações, orçamentos, quotas, obras, documentos, relatórios mensais e um diretório de fornecedores partilhado com os condomínios à sua volta. Tudo num só lugar, em seis idiomas — quer o condomínio seja autogerido, quer trabalhe com um administrador profissional.',
+        title: 'Com ou sem administração, uma casa tranquila para o seu condomínio',
+        body: 'Reuniões, votações, orçamentos, quotas, obras, documentos, relatórios mensais e um diretório de fornecedores partilhado. Condóminos, comissões e administradores veem todos o mesmo retrato, em seis idiomas.',
       },
     ],
     peekEyebrow: 'Veja a funcionar',

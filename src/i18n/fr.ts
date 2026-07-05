@@ -70,17 +70,17 @@ const fr: Copy = {
       {
         label: 'Pourquoi',
         title: 'Parce qu’un foyer partagé mérite une voix partagée',
-        body: 'Nous croyons que les meilleures communautés ne s’administrent pas — elles s’invitent. Quand chacun peut voir, chacun peut parler et chacun peut aider, un immeuble devient un voisinage.',
+        body: 'Nous croyons que les meilleures communautés ne se gèrent pas au-dessus des gens ; elles se conduisent avec eux. Quand chacun peut voir, chacun peut parler et chacun peut aider, un immeuble devient un voisinage.',
       },
       {
         label: 'Comment',
         title: 'En rendant tout visible et chaque voix importante',
-        body: 'Des budgets transparents que tout le monde peut lire. Des décisions prises par vote, pas par celui qui a crié le plus fort. Une confiance qui circule entre copropriétés voisines, pas venue d’inconnus sur internet.',
+        body: 'Des budgets transparents que tout le monde peut lire. Des décisions prises par vote, pas par celui qui a crié le plus fort. Quand les copropriétaires voient le travail et que le syndic travaille au grand jour, la confiance circule dans les deux sens.',
       },
       {
         label: 'Quoi',
-        title: 'Un foyer paisible pour votre copropriété',
-        body: 'Réunions, votes, budgets, charges, travaux, documents, rapports mensuels et un annuaire d’artisans partagé avec les copropriétés voisines. Tout au même endroit, en six langues — que votre copropriété soit en syndic bénévole ou accompagnée d’un syndic professionnel.',
+        title: 'Avec syndic ou autogérée, un foyer paisible pour votre copropriété',
+        body: 'Réunions, votes, budgets, charges, travaux, documents, rapports mensuels et un annuaire d’artisans partagé. Copropriétaires, conseils syndicaux et syndics voient tous la même image, en six langues.',
       },
     ],
     peekEyebrow: 'Voyez-le à l’œuvre',
