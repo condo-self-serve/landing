@@ -251,7 +251,9 @@ h3 {
   .site-header__inner {
     flex-wrap: wrap;
     height: auto;
-    padding: 10px 0;
+    /* keep the container's horizontal padding — content must never touch
+       the viewport edge */
+    padding: 10px 24px;
     row-gap: 2px;
     column-gap: 14px;
   }
