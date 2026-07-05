@@ -1,11 +1,31 @@
-import { Link } from 'react-router-dom';
+import { GlobalOutlined } from '@ant-design/icons';
+import { Link, useLocation } from 'react-router-dom';
 import { APP_URL } from '../siteMeta';
-import { localePath, useCopy, useLocale } from '../i18n';
+import {
+  COPY,
+  LANG_STORAGE_KEY,
+  LOCALES,
+  localePath,
+  parsePath,
+  useCopy,
+  useLocale,
+  type LocaleCode,
+} from '../i18n';
 
 export default function SiteFooter() {
   const copy = useCopy();
   const locale = useLocale();
-  const p = (path: string) => localePath(locale, path);
+  const { pathname } = useLocation();
+  const { path } = parsePath(pathname);
+  const p = (to: string) => localePath(locale, to);
+
+  const remember = (code: LocaleCode) => {
+    try {
+      localStorage.setItem(LANG_STORAGE_KEY, code);
+    } catch {
+      /* private browsing — the choice just won't persist */
+    }
+  };
 
   return (
     <footer className="site-footer">
@@ -29,6 +49,22 @@ export default function SiteFooter() {
             <a href={`${APP_URL}/users/help`}>{copy.footer.help}</a>
           </nav>
         </div>
+        {/* Every language in its own name — always available down here. */}
+        <nav className="site-footer__langs" aria-label={copy.header.languageLabel}>
+          <GlobalOutlined aria-hidden="true" />
+          {LOCALES.map((code) => (
+            <Link
+              key={code}
+              to={localePath(code, path)}
+              onClick={() => remember(code)}
+              className={code === locale ? 'site-footer__lang--current' : undefined}
+              aria-current={code === locale ? 'true' : undefined}
+              lang={code}
+            >
+              {COPY[code].langName}
+            </Link>
+          ))}
+        </nav>
         <div className="site-footer__legal">
           © {new Date().getFullYear()} Condoclar. {copy.footer.legal}
         </div>

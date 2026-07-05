@@ -258,10 +258,13 @@ h3 {
     font-size: 19px;
   }
 
+  /* The switcher lives in the footer on mobile — the header stays calm. */
   .site-header__lang {
+    display: none;
+  }
+
+  .site-header__cta {
     margin-left: auto;
-    padding: 5px 10px;
-    font-size: 13px;
   }
 
   .site-header .site-header__cta.ant-btn {
@@ -805,10 +808,34 @@ h3 {
   color: #fff;
 }
 
-.site-footer__legal {
+.site-footer__langs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 20px;
   margin-top: 40px;
   padding-top: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.site-footer__langs a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+.site-footer__langs a:hover {
+  color: #fff;
+}
+
+.site-footer__langs a.site-footer__lang--current {
+  color: var(--pollen);
+  font-weight: 800;
+}
+
+.site-footer__legal {
+  margin-top: 24px;
   font-size: 13.5px;
   color: rgba(255, 255, 255, 0.45);
 }
