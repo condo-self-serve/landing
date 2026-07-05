@@ -3,10 +3,10 @@ import { Link, useLocation } from 'react-router-dom';
 import { APP_URL } from '../siteMeta';
 import {
   COPY,
-  LANG_STORAGE_KEY,
   LOCALES,
   localePath,
   parsePath,
+  persistLocale,
   useCopy,
   useLocale,
   type LocaleCode,
@@ -19,13 +19,7 @@ export default function SiteFooter() {
   const { path } = parsePath(pathname);
   const p = (to: string) => localePath(locale, to);
 
-  const remember = (code: LocaleCode) => {
-    try {
-      localStorage.setItem(LANG_STORAGE_KEY, code);
-    } catch {
-      /* private browsing — the choice just won't persist */
-    }
-  };
+  const remember = (code: LocaleCode) => persistLocale(code, { explicit: true });
 
   return (
     <footer className="site-footer">

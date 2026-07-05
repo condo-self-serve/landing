@@ -4,10 +4,10 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { APP_URL } from '../siteMeta';
 import {
   COPY,
-  LANG_STORAGE_KEY,
   LOCALES,
   localePath,
   parsePath,
+  persistLocale,
   useCopy,
   useLocale,
   type LocaleCode,
@@ -31,11 +31,7 @@ export default function SiteHeader() {
   // Every language is listed in its own name — English always reads "English",
   // Deutsch always reads "Deutsch" — so anyone can find their way home.
   const switchTo = (code: LocaleCode) => {
-    try {
-      localStorage.setItem(LANG_STORAGE_KEY, code);
-    } catch {
-      /* private browsing — the choice just won't persist */
-    }
+    persistLocale(code, { explicit: true });
     navigate(localePath(code, normalised));
   };
 

@@ -3,7 +3,7 @@ import { ConfigProvider } from 'antd';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { landingTheme } from './theme';
 import { pageForPath } from './siteMeta';
-import { LocaleContext, LOCALES, localePath, parsePath } from './i18n';
+import { LocaleContext, LOCALES, localePath, parsePath, persistLocale } from './i18n';
 import SiteHeader from './components/SiteHeader';
 import SiteFooter from './components/SiteFooter';
 import HomePage from './pages/HomePage';
@@ -24,6 +24,10 @@ function HeadSync() {
       .querySelector('meta[name="description"]')
       ?.setAttribute('content', meta.description);
     document.documentElement.lang = meta.locale;
+    // Seed the *.condoclar.eu language cookie with the language the visitor is
+    // actually reading, so the app opens in it after sign-up. Implicit — an
+    // existing cookie (their choice, here or in the app) is never overwritten.
+    persistLocale(meta.locale);
     window.scrollTo(0, 0);
   }, [pathname]);
   return null;
