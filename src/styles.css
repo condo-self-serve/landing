@@ -243,22 +243,55 @@ h3 {
   color: var(--cerulean);
 }
 
-/* Mobile header: logo + CTA on the first row, nav links on their own row
-   below — nothing squeezes, nothing wraps mid-button. */
-@media (max-width: 760px) {
+/* Two-row header below 1150px: brand + language + CTA on the first row, nav
+   links on their own full-width row. The threshold covers the longest
+   translations (pt/fr/de) — nothing squeezes, overlaps or clips. The
+   single-row desktop layout is untouched above it. */
+@media (max-width: 1150px) {
   .site-header__inner {
     flex-wrap: wrap;
     height: auto;
     padding: 10px 0;
     row-gap: 2px;
-    column-gap: 12px;
+    column-gap: 14px;
   }
 
+  .site-header__lang {
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  .site-header__cta {
+    flex-shrink: 0;
+  }
+
+  .site-header__nav {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+    gap: 24px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .site-header__nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-header__link {
+    white-space: nowrap;
+    padding: 4px 0 8px;
+  }
+}
+
+/* Small screens: the language switcher lives in the footer only, and the
+   header is just logo + compact CTA over the nav row. */
+@media (max-width: 620px) {
   .site-header__brand {
     font-size: 19px;
   }
 
-  /* The switcher lives in the footer on mobile — the header stays calm. */
   .site-header__lang {
     display: none;
   }
@@ -274,18 +307,11 @@ h3 {
   }
 
   .site-header__nav {
-    order: 3;
-    width: 100%;
-    margin-left: 0;
     gap: 20px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
   }
 
   .site-header__link {
     font-size: 15px;
-    white-space: nowrap;
-    padding: 4px 0 8px;
   }
 }
 
