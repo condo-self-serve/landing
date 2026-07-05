@@ -66,11 +66,34 @@ export default function ManifestoPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" style={{ paddingBottom: 48 }}>
         <div className="container">
-          {BELIEFS.map((b, i) => (
+          {BELIEFS.slice(0, 3).map((b, i) => (
             <div className="belief" key={b.title}>
               <div className="belief__number">{String(i + 1).padStart(2, '0')}</div>
+              <div>
+                <h3>{b.title}</h3>
+                <p>{b.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <figure className="image-band" style={{ margin: 0 }}>
+        <img
+          src="/media/band-laundry.jpg"
+          alt="Colourful laundry hanging between two apartment buildings above a narrow street at golden hour"
+          loading="lazy"
+        />
+        <figcaption>The everyday beauty of shared living.</figcaption>
+      </figure>
+
+      <section className="section" style={{ paddingTop: 48 }}>
+        <div className="container">
+          {BELIEFS.slice(3).map((b, i) => (
+            <div className="belief" key={b.title}>
+              <div className="belief__number">{String(i + 4).padStart(2, '0')}</div>
               <div>
                 <h3>{b.title}</h3>
                 <p>{b.body}</p>
