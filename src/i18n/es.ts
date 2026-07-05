@@ -80,7 +80,7 @@ const es: Copy = {
       {
         label: 'Qué',
         title: 'Un hogar tranquilo para tu comunidad',
-        body: 'Reuniones, votaciones, presupuestos, cuotas, obras, documentos, informes mensuales y un directorio de proveedores compartido con las comunidades de alrededor. Todo en un solo lugar, en seis idiomas.',
+        body: 'Reuniones, votaciones, presupuestos, cuotas, obras, documentos, informes mensuales y un directorio de proveedores compartido con las comunidades de alrededor. Todo en un solo lugar, en seis idiomas — tanto si tu comunidad se autogestiona como si trabaja con un administrador profesional.',
       },
     ],
     peekEyebrow: 'Míralo funcionando',
@@ -124,7 +124,11 @@ const es: Copy = {
     faq: [
       {
         q: '¿Para quién es Condoclar?',
-        a: 'Condoclar está hecho para quienes viven en y gestionan comunidades de propietarios: dueños, presidentes y administradores elegidos, y los vecinos que calladamente lo mantienen todo en marcha. Si tu edificio se autogestiona, o simplemente quieres que todos vean lo que pasa, es para ti.',
+        a: 'Para propietarios — con o sin administrador de fincas. Los edificios autogestionados ganan un lugar tranquilo para los voluntarios que lo llevan todo. Los que tienen administrador profesional lo invitan también: el administrador gestiona el día a día en el mismo espacio abierto que ven los propietarios. La transparencia funciona para ambos lados.',
+      },
+      {
+        q: 'Tenemos administrador de fincas — ¿Condoclar lo sustituye?',
+        a: 'No: les da a ambos un lugar mejor donde trabajar. El administrador se une a la comunidad como un miembro más y gestiona juntas, presupuestos y obras a la vista; los propietarios ven los mismos números y registros sin tener que pedirlos. Menos correos persiguiendo respuestas para el administrador, menos sorpresas para los propietarios.',
       },
       {
         q: '¿Las valoraciones de proveedores son públicas en internet?',
@@ -180,7 +184,7 @@ const es: Copy = {
         eyebrow: 'Dinero a la vista',
         title: 'Finanzas que cualquier vecino puede leer',
         intro:
-          'La mayor parte de la tensión en una comunidad es, en el fondo, dinero que nadie puede ver. Condoclar pone cada euro a la luz del día — y quita de encima las conversaciones incómodas.',
+          'La mayor parte de la tensión en una comunidad es, en el fondo, dinero que nadie puede ver. Condoclar pone cada euro a la luz del día — y quita de encima las conversaciones incómodas. Lleve las cuentas un tesorero voluntario o un administrador profesional, todos los propietarios leen los mismos números.',
         imageAlt: 'Pantalla de cuotas de Condoclar con el plan de cuotas y totales previstos y cobrados por piso',
         features: [
           {
@@ -319,7 +323,7 @@ const es: Copy = {
       },
     ],
     bandAlt: 'Dos vecinos charlando entre balcones de un edificio moderno, uno pasando un cuenco de limones',
-    bandCaption: 'Así se ha movido siempre la confianza. Nosotros solo le dimos un directorio.',
+    bandCaption: 'Las recomendaciones siempre han viajado de vecino a vecino. Condoclar solo las deja por escrito.',
     cta: {
       title: 'Sé el vecino que encontró al bueno.',
       body: 'Los proveedores de confianza de tu comunidad pueden ahorrarle una semana horrible al edificio de al lado. Compártelos.',

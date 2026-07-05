@@ -80,7 +80,7 @@ const pt: Copy = {
       {
         label: 'O quê',
         title: 'Uma casa tranquila para o seu condomínio',
-        body: 'Reuniões, votações, orçamentos, quotas, obras, documentos, relatórios mensais e um diretório de fornecedores partilhado com os condomínios à sua volta. Tudo num só lugar, em seis idiomas.',
+        body: 'Reuniões, votações, orçamentos, quotas, obras, documentos, relatórios mensais e um diretório de fornecedores partilhado com os condomínios à sua volta. Tudo num só lugar, em seis idiomas — quer o condomínio seja autogerido, quer trabalhe com um administrador profissional.',
       },
     ],
     peekEyebrow: 'Veja a funcionar',
@@ -124,7 +124,11 @@ const pt: Copy = {
     faq: [
       {
         q: 'Para quem é o Condoclar?',
-        a: 'O Condoclar é feito para quem vive e gere condomínios — proprietários, administradores eleitos e os vizinhos que discretamente mantêm tudo a funcionar. Se o seu prédio é autogerido, ou se simplesmente quer que todos vejam o que se passa, é para si.',
+        a: 'Para condóminos — com ou sem empresa de administração. Os prédios autogeridos ganham um lugar tranquilo para os voluntários que gerem tudo. Os que têm administrador profissional convidam-no também: o administrador gere o dia a dia no mesmo espaço aberto que os condóminos veem. A transparência funciona para os dois lados.',
+      },
+      {
+        q: 'Temos um administrador profissional — o Condoclar substitui-o?',
+        a: 'Não — dá a ambos um lugar melhor para trabalhar. O administrador entra no seu condomínio como qualquer membro e gere reuniões, orçamentos e obras às claras; os condóminos veem os mesmos números e registos sem terem de pedir. Menos emails de insistência para o administrador, menos surpresas para os condóminos.',
       },
       {
         q: 'As avaliações de fornecedores são públicas na internet?',
@@ -180,7 +184,7 @@ const pt: Copy = {
         eyebrow: 'Dinheiro às claras',
         title: 'Finanças que qualquer vizinho consegue ler',
         intro:
-          'A maior parte da tensão num condomínio é, no fundo, dinheiro que ninguém consegue ver. O Condoclar põe cada euro à luz do dia — e tira as conversas desconfortáveis dos ombros das pessoas.',
+          'A maior parte da tensão num condomínio é, no fundo, dinheiro que ninguém consegue ver. O Condoclar põe cada euro à luz do dia — e tira as conversas desconfortáveis dos ombros das pessoas. Quer as contas sejam de um tesoureiro voluntário ou de um administrador profissional, todos os condóminos leem os mesmos números.',
         imageAlt: 'Ecrã de quotas do Condoclar com o plano de quotas e totais previstos e cobrados por fração',
         features: [
           {
@@ -319,7 +323,7 @@ const pt: Copy = {
       },
     ],
     bandAlt: 'Dois vizinhos à conversa entre varandas de um prédio moderno, um a passar uma taça de limões',
-    bandCaption: 'É assim que a confiança sempre viajou. Nós só lhe demos um diretório.',
+    bandCaption: 'As recomendações sempre viajaram de vizinho para vizinho. O Condoclar apenas as regista.',
     cta: {
       title: 'Seja o vizinho que encontrou o bom.',
       body: 'Os fornecedores de confiança do seu condomínio podem poupar uma semana péssima ao prédio ao lado. Partilhe-os.',

@@ -80,7 +80,7 @@ const fr: Copy = {
       {
         label: 'Quoi',
         title: 'Un foyer paisible pour votre copropriété',
-        body: 'Réunions, votes, budgets, charges, travaux, documents, rapports mensuels et un annuaire d’artisans partagé avec les copropriétés voisines. Tout au même endroit, en six langues.',
+        body: 'Réunions, votes, budgets, charges, travaux, documents, rapports mensuels et un annuaire d’artisans partagé avec les copropriétés voisines. Tout au même endroit, en six langues — que votre copropriété soit en syndic bénévole ou accompagnée d’un syndic professionnel.',
       },
     ],
     peekEyebrow: 'Voyez-le à l’œuvre',
@@ -124,7 +124,11 @@ const fr: Copy = {
     faq: [
       {
         q: 'À qui s’adresse Condoclar ?',
-        a: 'Condoclar est fait pour ceux qui vivent dans une copropriété et la font tourner — propriétaires, syndics bénévoles élus et voisins qui, discrètement, font que tout fonctionne. Si votre immeuble est autogéré, ou si vous voulez simplement que chacun voie ce qui se passe, c’est pour vous.',
+        a: 'Aux copropriétaires — avec ou sans syndic professionnel. Les immeubles en syndic bénévole y trouvent un endroit paisible pour tout gérer. Ceux qui ont un syndic professionnel l’invitent aussi : le syndic gère le quotidien dans le même espace ouvert que voient les copropriétaires. La transparence profite aux deux côtés.',
+      },
+      {
+        q: 'Nous avons un syndic professionnel — Condoclar le remplace-t-il ?',
+        a: 'Non — il vous donne à tous les deux un meilleur endroit pour travailler. Le syndic rejoint votre copropriété comme n’importe quel membre et gère réunions, budgets et travaux au grand jour ; les copropriétaires voient les mêmes chiffres et les mêmes registres sans avoir à les demander. Moins de relances pour le syndic, moins de surprises pour les copropriétaires.',
       },
       {
         q: 'Les notes des artisans sont-elles publiques sur internet ?',
@@ -180,7 +184,7 @@ const fr: Copy = {
         eyebrow: 'L’argent au grand jour',
         title: 'Des finances que chaque voisin peut lire',
         intro:
-          'La plupart des tensions en copropriété, c’est au fond de l’argent que personne ne voit. Condoclar met chaque euro en pleine lumière — et enlève les conversations gênantes des épaules de chacun.',
+          'La plupart des tensions en copropriété, c’est au fond de l’argent que personne ne voit. Condoclar met chaque euro en pleine lumière — et enlève les conversations gênantes des épaules de chacun. Que les comptes soient tenus par un trésorier bénévole ou un syndic professionnel, chaque copropriétaire lit les mêmes chiffres.',
         imageAlt: 'Écran des charges Condoclar avec l’échéancier et les totaux attendus et encaissés par lot',
         features: [
           {
@@ -319,7 +323,7 @@ const fr: Copy = {
       },
     ],
     bandAlt: 'Deux voisins discutant d’un balcon à l’autre d’un immeuble moderne, l’un tendant un saladier de citrons',
-    bandCaption: 'C’est ainsi que la confiance a toujours voyagé. Nous lui avons juste donné un annuaire.',
+    bandCaption: 'Les recommandations ont toujours voyagé de voisin à voisin. Condoclar ne fait que les consigner.',
     cta: {
       title: 'Soyez le voisin qui a trouvé le bon.',
       body: 'Les artisans de confiance de votre copropriété peuvent épargner une très mauvaise semaine à l’immeuble d’à côté. Partagez-les.',

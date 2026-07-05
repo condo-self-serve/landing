@@ -80,7 +80,7 @@ const de: Copy = {
       {
         label: 'Was',
         title: 'Ein ruhiges Zuhause für Ihre Eigentümergemeinschaft',
-        body: 'Versammlungen, Abstimmungen, Budgets, Hausgeld, Instandhaltung, Dokumente, Monatsberichte und ein Handwerkerverzeichnis, geteilt mit den Gemeinschaften um Sie herum. Alles an einem Ort, in sechs Sprachen.',
+        body: 'Versammlungen, Abstimmungen, Budgets, Hausgeld, Instandhaltung, Dokumente, Monatsberichte und ein Handwerkerverzeichnis, geteilt mit den Gemeinschaften um Sie herum. Alles an einem Ort, in sechs Sprachen — ob Ihre Gemeinschaft sich selbst verwaltet oder mit einer professionellen Hausverwaltung arbeitet.',
       },
     ],
     peekEyebrow: 'Sehen Sie es in Aktion',
@@ -124,7 +124,11 @@ const de: Copy = {
     faq: [
       {
         q: 'Für wen ist Condoclar?',
-        a: 'Condoclar ist für die Menschen gebaut, die in Eigentümergemeinschaften wohnen und sie am Laufen halten — Eigentümer, gewählte Verwalter und die Nachbarn, die im Stillen alles zusammenhalten. Wenn Ihr Haus sich selbst verwaltet oder Sie einfach wollen, dass alle sehen, was passiert, ist es für Sie.',
+        a: 'Für Wohnungseigentümer — mit oder ohne Hausverwaltung. Selbstverwaltete Häuser bekommen einen ruhigen Ort für die Ehrenamtlichen, die alles am Laufen halten. Häuser mit professioneller Verwaltung laden sie einfach mit ein: Die Verwaltung führt das Tagesgeschäft im selben offenen Raum, den die Eigentümer sehen. Transparenz wirkt für beide Seiten.',
+      },
+      {
+        q: 'Wir haben eine professionelle Hausverwaltung — ersetzt Condoclar sie?',
+        a: 'Nein — es gibt beiden einen besseren Ort zum Arbeiten. Die Verwaltung tritt der Gemeinschaft wie jedes Mitglied bei und führt Versammlungen, Budgets und Aufträge im Offenen; Eigentümer sehen dieselben Zahlen und Unterlagen, ohne fragen zu müssen. Weniger Nachfass-E-Mails für die Verwaltung, weniger Überraschungen für die Eigentümer.',
       },
       {
         q: 'Sind Handwerkerbewertungen öffentlich im Internet?',
@@ -180,7 +184,7 @@ const de: Copy = {
         eyebrow: 'Geld im Tageslicht',
         title: 'Finanzen, die jeder Nachbar lesen kann',
         intro:
-          'Die meiste Spannung in einer Gemeinschaft ist im Kern Geld, das niemand sieht. Condoclar stellt jeden Euro ins Tageslicht — und nimmt die unangenehmen Gespräche von den Schultern.',
+          'Die meiste Spannung in einer Gemeinschaft ist im Kern Geld, das niemand sieht. Condoclar stellt jeden Euro ins Tageslicht — und nimmt die unangenehmen Gespräche von den Schultern. Ob ein ehrenamtlicher Kassenwart oder eine professionelle Verwaltung die Bücher führt: Jeder Eigentümer liest dieselben Zahlen.',
         imageAlt: 'Condoclar-Hausgeldansicht mit Beitragsplan sowie erwarteten und eingegangenen Summen je Einheit',
         features: [
           {
@@ -319,7 +323,7 @@ const de: Copy = {
       },
     ],
     bandAlt: 'Zwei Nachbarn im Gespräch zwischen den Balkonen eines modernen Gebäudes, einer reicht eine Schale Zitronen hinüber',
-    bandCaption: 'So ist Vertrauen schon immer gereist. Wir haben ihm nur ein Verzeichnis gegeben.',
+    bandCaption: 'Empfehlungen sind schon immer von Nachbar zu Nachbar gereist. Condoclar schreibt sie nur auf.',
     cta: {
       title: 'Seien Sie der Nachbar, der den Guten gefunden hat.',
       body: 'Die vertrauten Handwerker Ihrer Gemeinschaft können dem Haus nebenan eine sehr schlechte Woche ersparen. Teilen Sie sie.',

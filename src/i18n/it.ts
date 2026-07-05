@@ -80,7 +80,7 @@ const it: Copy = {
       {
         label: 'Cosa',
         title: 'Una casa serena per il tuo condominio',
-        body: 'Assemblee, votazioni, bilanci, quote, lavori, documenti, report mensili e un elenco fornitori condiviso con i condomini intorno a te. Tutto in un unico posto, in sei lingue.',
+        body: 'Assemblee, votazioni, bilanci, quote, lavori, documenti, report mensili e un elenco fornitori condiviso con i condomini intorno a te. Tutto in un unico posto, in sei lingue — che il condominio sia autogestito o segua un amministratore professionista.',
       },
     ],
     peekEyebrow: 'Guardalo all’opera',
@@ -124,7 +124,11 @@ const it: Copy = {
     faq: [
       {
         q: 'Per chi è Condoclar?',
-        a: 'Condoclar è fatto per chi vive nei condomini e li manda avanti: proprietari, amministratori eletti e i vicini che in silenzio fanno funzionare tutto. Se il tuo palazzo è autogestito, o se semplicemente vuoi che tutti vedano cosa succede, è per te.',
+        a: 'Per i condòmini — con o senza amministratore professionista. I palazzi autogestiti trovano un posto sereno per i volontari che mandano avanti tutto. Quelli con un amministratore lo invitano dentro: l’amministratore gestisce il quotidiano nello stesso spazio aperto che vedono i proprietari. La trasparenza funziona per entrambe le parti.',
+      },
+      {
+        q: 'Abbiamo un amministratore professionista — Condoclar lo sostituisce?',
+        a: 'No: dà a entrambi un posto migliore dove lavorare. L’amministratore entra nel condominio come qualsiasi membro e gestisce assemblee, bilanci e lavori alla luce del sole; i proprietari vedono gli stessi numeri e gli stessi registri senza doverli chiedere. Meno solleciti per l’amministratore, meno sorprese per i proprietari.',
       },
       {
         q: 'Le valutazioni dei fornitori sono pubbliche su internet?',
@@ -180,7 +184,7 @@ const it: Copy = {
         eyebrow: 'Soldi alla luce del sole',
         title: 'Finanze che ogni vicino può leggere',
         intro:
-          'Gran parte della tensione in condominio, in fondo, è denaro che nessuno vede. Condoclar mette ogni euro alla luce del giorno — e toglie dalle spalle le conversazioni imbarazzanti.',
+          'Gran parte della tensione in condominio, in fondo, è denaro che nessuno vede. Condoclar mette ogni euro alla luce del giorno — e toglie dalle spalle le conversazioni imbarazzanti. Che i conti li tenga un tesoriere volontario o un amministratore professionista, ogni proprietario legge gli stessi numeri.',
         imageAlt: 'Schermata delle quote di Condoclar con piano rate e totali previsti e incassati per unità',
         features: [
           {
@@ -319,7 +323,7 @@ const it: Copy = {
       },
     ],
     bandAlt: 'Due vicini che chiacchierano tra i balconi di un edificio moderno, uno passa una ciotola di limoni',
-    bandCaption: 'È così che la fiducia ha sempre viaggiato. Noi le abbiamo solo dato un elenco.',
+    bandCaption: 'Le raccomandazioni hanno sempre viaggiato di vicino in vicino. Condoclar si limita a metterle per iscritto.',
     cta: {
       title: 'Sii il vicino che ha trovato quello bravo.',
       body: 'I fornitori di fiducia del tuo condominio possono risparmiare una settimana pessima al palazzo accanto. Condividili.',

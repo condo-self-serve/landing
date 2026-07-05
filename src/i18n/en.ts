@@ -81,7 +81,7 @@ const en: Copy = {
       {
         label: 'What',
         title: 'One calm home for your condominium',
-        body: 'Meetings, votes, budgets, fees, maintenance jobs, documents, monthly reports and a vendor directory shared with the condos around you. Everything in one place, in six languages.',
+        body: 'Meetings, votes, budgets, fees, maintenance jobs, documents, monthly reports and a vendor directory shared with the condos around you. Everything in one place, in six languages — whether your condo is self-managed or works with a professional administrator.',
       },
     ],
     peekEyebrow: 'See it working',
@@ -126,7 +126,11 @@ const en: Copy = {
     faq: [
       {
         q: 'Who is Condoclar for?',
-        a: 'Condoclar is built for the people who live in and run condominiums — owners, elected administrators and the neighbours who quietly keep everything going. If your building is self-managed, or you simply want everyone to see what’s happening, it’s for you.',
+        a: 'Condo owners — with or without a management company. Self-managed buildings get one calm place for the volunteers who run everything. Buildings with a professional administrator invite them in too: the administrator runs the day-to-day in the same open space the owners see. Transparency works for both sides.',
+      },
+      {
+        q: 'We have a professional administrator — does Condoclar replace them?',
+        a: 'No — it gives you both a better place to work. The administrator joins your condo like any member and manages meetings, budgets and jobs in the open; owners see the same numbers and records without having to ask. Fewer chasing emails for the administrator, fewer surprises for the owners.',
       },
       {
         q: 'Are vendor ratings public on the internet?',
@@ -182,7 +186,7 @@ const en: Copy = {
         eyebrow: 'Money in the open',
         title: 'Finances every neighbour can read',
         intro:
-          'Most tension in a condominium is really about money nobody can see. Condoclar puts every euro in daylight — and takes the awkward conversations off people’s shoulders.',
+          'Most tension in a condominium is really about money nobody can see. Condoclar puts every euro in daylight — and takes the awkward conversations off people’s shoulders. Whether a volunteer treasurer or a professional administrator keeps the books, every owner reads the same numbers.',
         imageAlt: 'Condoclar fees screen with the fee schedule, expected and collected totals per unit',
         features: [
           {
@@ -321,7 +325,7 @@ const en: Copy = {
       },
     ],
     bandAlt: 'Two neighbours chatting across the balconies of a modern building, one handing over a bowl of lemons',
-    bandCaption: 'This is how trust has always moved. We just gave it a directory.',
+    bandCaption: 'Recommendations have always travelled neighbour to neighbour. Condoclar just writes them down.',
     cta: {
       title: 'Be the neighbour who found the good one.',
       body: 'Your condo’s trusted vendors could save the building next door a very bad week. Share them.',
