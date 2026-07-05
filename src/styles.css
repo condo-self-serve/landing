@@ -444,6 +444,36 @@ h3 {
   color: var(--deep);
 }
 
+/* ---------- app screenshots ---------- */
+
+/* Product screenshots keep their natural aspect ratio inside splits and get a
+   window-style frame so they read as "the real app", not a photo. */
+.split__media--app img {
+  aspect-ratio: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 23, 31, 0.12);
+  box-shadow: 0 24px 60px rgba(0, 23, 31, 0.16);
+}
+
+.app-showcase {
+  margin-top: 48px;
+}
+
+.app-showcase img {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 23, 31, 0.12);
+  box-shadow: 0 32px 80px rgba(0, 52, 89, 0.22);
+}
+
+.app-showcase figcaption {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 15px;
+  color: #64748b;
+  font-weight: 600;
+}
+
 /* ---------- numbered steps ---------- */
 
 .steps {

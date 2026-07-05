@@ -85,6 +85,26 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ------------------------------------------------ product peek */}
+      <section className="section section--tight">
+        <div className="container">
+          <div style={{ textAlign: 'center' }}>
+            <span className="eyebrow">See it working</span>
+            <h2>One calm dashboard, not seventeen group chats</h2>
+          </div>
+          <figure className="app-showcase" style={{ margin: '48px 0 0' }}>
+            <img
+              src="/media/app-dashboard.webp"
+              alt="The Condoclar dashboard: members, recent activity across votes, jobs and vendors, and quick links to every area"
+              loading="lazy"
+            />
+            <figcaption>
+              The real thing — everything your condo decided, spent and fixed, in one place.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       {/* ------------------------------------------------ pull quote */}
       <section className="section--parchment section--tight">
         <div className="container">

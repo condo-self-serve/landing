@@ -82,8 +82,8 @@ export default function ManifestoPage() {
 
       <figure className="image-band" style={{ margin: 0 }}>
         <img
-          src="/media/band-laundry.jpg"
-          alt="Colourful laundry hanging between two apartment buildings above a narrow street at golden hour"
+          src="/media/band-courtyard.jpg"
+          alt="The shared courtyard of a modern condominium at dusk — children's bikes by a bench, neighbours chatting"
           loading="lazy"
         />
         <figcaption>The everyday beauty of shared living.</figcaption>

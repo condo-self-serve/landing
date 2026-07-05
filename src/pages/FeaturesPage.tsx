@@ -23,7 +23,7 @@ interface Cluster {
   eyebrow: string;
   title: string;
   intro: string;
-  image: { src: string; alt: string };
+  image: { src: string; alt: string; appShot?: boolean };
   reverse?: boolean;
   features: MiniFeature[];
 }
@@ -35,8 +35,9 @@ const CLUSTERS: Cluster[] = [
     intro:
       'The condo meeting is where community is made or lost. Condoclar makes it something neighbours look forward to — short, fair, and finished on time.',
     image: {
-      src: '/media/feature-meeting.jpg',
-      alt: 'Neighbours of all ages having a relaxed meeting on a rooftop terrace at sunset',
+      src: '/media/app-vote.webp',
+      alt: 'Condoclar vote screen showing a live ballot with results, quorum and participation',
+      appShot: true,
     },
     features: [
       {
@@ -69,8 +70,9 @@ const CLUSTERS: Cluster[] = [
     intro:
       'Most tension in a condominium is really about money nobody can see. Condoclar puts every euro in daylight — and takes the awkward conversations off people’s shoulders.',
     image: {
-      src: '/media/finances-table.jpg',
-      alt: 'Two neighbours calmly reviewing their condominium budget together at a kitchen table',
+      src: '/media/app-fees.webp',
+      alt: 'Condoclar fees screen with the fee schedule, expected and collected totals per unit',
+      appShot: true,
     },
     reverse: true,
     features: [
@@ -125,8 +127,9 @@ const CLUSTERS: Cluster[] = [
     intro:
       'A building stays loved when small problems get fixed early, by people you trust. Condoclar turns maintenance from a burden into a rhythm.',
     image: {
-      src: '/media/care-painter.jpg',
-      alt: 'A painter repainting shutters of an apartment building while a resident chats with him',
+      src: '/media/app-jobs.webp',
+      alt: 'Condoclar jobs board tracking maintenance requests from submission through completion',
+      appShot: true,
     },
     features: [
       {
@@ -225,7 +228,7 @@ export default function FeaturesPage() {
         <section className="cluster" key={cluster.eyebrow}>
           <div className="container">
             <div className={`split${cluster.reverse ? ' split--reverse' : ''}`}>
-              <div className="split__media">
+              <div className={`split__media${cluster.image.appShot ? ' split__media--app' : ''}`}>
                 <img src={cluster.image.src} alt={cluster.image.alt} loading="lazy" />
               </div>
               <div>
