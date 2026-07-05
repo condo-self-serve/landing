@@ -179,7 +179,7 @@ export default function HomePage() {
                 </span>
               </div>
               <p style={{ marginTop: 28 }}>
-                <Link to="/neighbours/" style={{ fontWeight: 800, fontSize: 17 }}>
+                <Link to="/neighbours/" className="arrow-link">
                   How the shared vendor directory works <ArrowRightOutlined />
                 </Link>
               </p>

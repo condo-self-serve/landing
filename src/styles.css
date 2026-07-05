@@ -31,6 +31,39 @@ img {
   display: block;
 }
 
+/* Brand link colours — never browser-default blue/purple. Component classes
+   (header, footer, arrow-link) override this where they need to. */
+a {
+  color: var(--cerulean);
+  text-decoration-color: rgba(0, 126, 167, 0.35);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--deep);
+}
+
+/* Emphasised inline links (e.g. next to images) — bold brand ink on a golden
+   underline so they read as invitations, not default hyperlinks. */
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 17px;
+  color: var(--deep);
+  text-decoration: none;
+  border-bottom: 3px solid var(--pollen);
+  padding-bottom: 3px;
+  transition: color 0.15s ease, border-color 0.15s ease, gap 0.15s ease;
+}
+
+.arrow-link:hover {
+  color: var(--cerulean);
+  border-bottom-color: var(--cerulean);
+  gap: 12px;
+}
+
 /* ---------- layout primitives ---------- */
 
 .container {
@@ -144,8 +177,7 @@ h3 {
 .site-header__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  gap: 28px;
   height: 72px;
 }
 
@@ -169,6 +201,7 @@ h3 {
   display: flex;
   align-items: center;
   gap: 28px;
+  margin-left: auto;
 }
 
 .site-header__link {
@@ -189,15 +222,44 @@ h3 {
   border-bottom-color: var(--pollen);
 }
 
-@media (max-width: 720px) {
-  .site-header__nav {
-    gap: 16px;
+/* Mobile header: logo + CTA on the first row, nav links on their own row
+   below — nothing squeezes, nothing wraps mid-button. */
+@media (max-width: 760px) {
+  .site-header__inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 0;
+    row-gap: 2px;
+    column-gap: 12px;
   }
-  .site-header__link {
+
+  .site-header__brand {
+    font-size: 19px;
+  }
+
+  .site-header__cta {
+    margin-left: auto;
+  }
+
+  .site-header .site-header__cta.ant-btn {
+    height: 34px;
+    padding: 0 12px;
     font-size: 14px;
   }
-  .site-header__brand span {
-    display: none;
+
+  .site-header__nav {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+    gap: 20px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .site-header__link {
+    font-size: 15px;
+    white-space: nowrap;
+    padding: 4px 0 8px;
   }
 }
 

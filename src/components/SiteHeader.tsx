@@ -34,10 +34,10 @@ export default function SiteHeader() {
               </Link>
             );
           })}
-          <Button type="primary" size="middle" href={APP_URL}>
-            Open Condoclar
-          </Button>
         </nav>
+        <Button type="primary" size="middle" href={APP_URL} className="site-header__cta">
+          Open Condoclar
+        </Button>
       </div>
     </header>
   );
