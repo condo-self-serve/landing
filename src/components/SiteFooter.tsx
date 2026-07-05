@@ -1,7 +1,12 @@
 import { Link } from 'react-router-dom';
 import { APP_URL } from '../siteMeta';
+import { localePath, useCopy, useLocale } from '../i18n';
 
 export default function SiteFooter() {
+  const copy = useCopy();
+  const locale = useLocale();
+  const p = (path: string) => localePath(locale, path);
+
   return (
     <footer className="site-footer">
       <div className="container">
@@ -11,25 +16,21 @@ export default function SiteFooter() {
               <img src="/favicon.svg" alt="" />
               Condoclar
             </div>
-            <p className="site-footer__tagline">
-              A condominium is a community. Condoclar is its digital home — removing the busywork
-              so neighbours can focus on the good.
-            </p>
+            <p className="site-footer__tagline">{copy.footer.tagline}</p>
           </div>
           <nav aria-label="Site">
-            <Link to="/">Why Condoclar</Link>
-            <Link to="/features/">Features</Link>
-            <Link to="/neighbours/">Neighbours &amp; vendors</Link>
-            <Link to="/manifesto/">Manifesto</Link>
+            <Link to={p('/')}>{copy.footer.why}</Link>
+            <Link to={p('/features/')}>{copy.footer.features}</Link>
+            <Link to={p('/neighbours/')}>{copy.footer.neighbours}</Link>
+            <Link to={p('/manifesto/')}>{copy.footer.manifesto}</Link>
           </nav>
           <nav aria-label="Product">
-            <a href={APP_URL}>Open the app</a>
-            <a href={`${APP_URL}/users/help`}>Help</a>
+            <a href={APP_URL}>{copy.footer.openApp}</a>
+            <a href={`${APP_URL}/users/help`}>{copy.footer.help}</a>
           </nav>
         </div>
         <div className="site-footer__legal">
-          © {new Date().getFullYear()} Condoclar. Built with care for the people who share a roof.
-          Available in English, Português, Español, Français, Italiano and Deutsch.
+          © {new Date().getFullYear()} Condoclar. {copy.footer.legal}
         </div>
       </div>
     </footer>

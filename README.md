@@ -24,6 +24,14 @@ The Condoclar marketing site — React 18 + Ant Design 5 (the same stack as the 
 
 Per-page metadata lives in **`src/siteMeta.ts`** — the single source of truth used by both the prerenderer and the client-side `HeadSync` component.
 
+## Languages
+
+The site ships in the app's six languages: English (`/`), Português (`/pt/`), Español (`/es/`), Français (`/fr/`), Italiano (`/it/`) and Deutsch (`/de/`) — 24 prerendered pages with per-locale `<html lang>`, titles, descriptions and `hreflang` alternates (x-default → English).
+
+- **All copy** lives in `src/i18n/<locale>.ts` — pages hold structure only. Add or change prose there, never in components.
+- **Autoload**: an inline script in `index.html` redirects first-time visitors on unprefixed pages to their `navigator.language` if we publish it. An explicit choice from the header's language switcher is stored in `localStorage['condoclar-lang']` and always wins. Crawlers (no JS) get English + hreflang.
+- **Switcher**: each language is listed in its own name (English always reads "English", Deutsch always "Deutsch").
+
 ## Develop
 
 ```bash

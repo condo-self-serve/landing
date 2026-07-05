@@ -1,39 +1,37 @@
 import { Button, Collapse } from 'antd';
 import { ArrowRightOutlined, LockOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
-import { APP_URL, FAQ } from '../siteMeta';
+import { APP_URL } from '../siteMeta';
+import { localePath, useCopy, useLocale } from '../i18n';
 import CtaBand from '../components/CtaBand';
 
 export default function HomePage() {
+  const copy = useCopy().home;
+  const locale = useLocale();
+
   return (
     <main>
       {/* ------------------------------------------------ hero */}
       <section className="hero">
         <div className="hero__media">
-          <img
-            src="/media/hero-courtyard.jpg"
-            alt="Neighbours talking and laughing together in the sunlit courtyard of their apartment building"
-            fetchPriority="high"
-          />
+          <img src="/media/hero-courtyard.jpg" alt={copy.heroAlt} fetchPriority="high" />
         </div>
         <div className="container">
           <div className="hero__inner">
             <span className="eyebrow">Condoclar</span>
             <h1>
-              It’s not just a building.
+              {copy.heroLine1}
               <br />
-              It’s your home, <span className="accent-underline">shared</span>.
+              {copy.heroLine2Pre}
+              <span className="accent-underline">{copy.heroAccent}</span>.
             </h1>
-            <p className="lede">
-              Condoclar takes the busywork out of running a condominium — the meetings, the money,
-              the maintenance — so neighbours can focus on what actually matters: each other.
-            </p>
+            <p className="lede">{copy.heroLede}</p>
             <div className="hero__actions">
               <Button type="primary" size="large" href={APP_URL} icon={<ArrowRightOutlined />} iconPosition="end">
-                Bring your condo together
+                {copy.ctaPrimary}
               </Button>
-              <Button size="large" ghost href="/features/">
-                See how it works
+              <Button size="large" ghost href={localePath(locale, '/features/')}>
+                {copy.ctaSecondary}
               </Button>
             </div>
           </div>
@@ -43,44 +41,21 @@ export default function HomePage() {
       {/* ------------------------------------------------ why / golden circle */}
       <section className="section">
         <div className="container">
-          <span className="eyebrow">Start with why</span>
+          <span className="eyebrow">{copy.whyEyebrow}</span>
           <h2>
-            We didn’t set out to build condo software.
+            {copy.whyTitle1}
             <br />
-            We set out to give neighbours their evenings back.
+            {copy.whyTitle2}
           </h2>
-          <p className="lede">
-            Every condominium is a community waiting to happen. What stands in the way is rarely
-            the people — it’s the paperwork. The chasing, the confusion, the meeting that goes
-            nowhere. Remove that, and something remarkable is left: neighbours.
-          </p>
+          <p className="lede">{copy.whyLede}</p>
           <div className="golden">
-            <div className="golden__step golden__step--why">
-              <div className="golden__label">Why</div>
-              <h3>Because a shared home deserves a shared voice</h3>
-              <p>
-                We believe the best communities aren’t managed — they’re invited. When everyone can
-                see, everyone can speak, and everyone can help, a building becomes a neighbourhood.
-              </p>
-            </div>
-            <div className="golden__step">
-              <div className="golden__label">How</div>
-              <h3>By making everything visible and every voice count</h3>
-              <p>
-                Transparent budgets anyone can read. Decisions made by ballot, not by whoever
-                shouted last. Trust that flows between neighbouring condos, not from strangers on
-                the internet.
-              </p>
-            </div>
-            <div className="golden__step">
-              <div className="golden__label">What</div>
-              <h3>One calm home for your condominium</h3>
-              <p>
-                Meetings, votes, budgets, fees, maintenance jobs, documents, monthly reports and a
-                vendor directory shared with the condos around you. Everything in one place, in six
-                languages.
-              </p>
-            </div>
+            {copy.golden.map((step, i) => (
+              <div className={`golden__step${i === 0 ? ' golden__step--why' : ''}`} key={step.label}>
+                <div className="golden__label">{step.label}</div>
+                <h3>{step.title}</h3>
+                <p>{step.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -89,18 +64,12 @@ export default function HomePage() {
       <section className="section section--tight">
         <div className="container">
           <div style={{ textAlign: 'center' }}>
-            <span className="eyebrow">See it working</span>
-            <h2>One calm dashboard, not seventeen group chats</h2>
+            <span className="eyebrow">{copy.peekEyebrow}</span>
+            <h2>{copy.peekTitle}</h2>
           </div>
           <figure className="app-showcase" style={{ margin: '48px 0 0' }}>
-            <img
-              src="/media/app-dashboard.webp"
-              alt="The Condoclar dashboard: members, recent activity across votes, jobs and vendors, and quick links to every area"
-              loading="lazy"
-            />
-            <figcaption>
-              The real thing — everything your condo decided, spent and fixed, in one place.
-            </figcaption>
+            <img src="/media/app-dashboard.webp" alt={copy.peekAlt} loading="lazy" />
+            <figcaption>{copy.peekCaption}</figcaption>
           </figure>
         </div>
       </section>
@@ -109,8 +78,8 @@ export default function HomePage() {
       <section className="section--parchment section--tight">
         <div className="container">
           <blockquote className="pull-quote">
-            “People don’t buy what you do; they buy why you do it.”
-            <cite>— Simon Sinek. Our why: bringing out the best in every community.</cite>
+            {copy.quote}
+            <cite>{copy.quoteCite}</cite>
           </blockquote>
         </div>
       </section>
@@ -118,36 +87,16 @@ export default function HomePage() {
       {/* ------------------------------------------------ small moments */}
       <section className="section">
         <div className="container">
-          <span className="eyebrow">The small moments</span>
-          <h2>What changes when the busywork disappears</h2>
+          <span className="eyebrow">{copy.momentsEyebrow}</span>
+          <h2>{copy.momentsTitle}</h2>
           <div className="card-grid">
-            <div className="story-card">
-              <div className="story-card__kicker">Tuesday, 19:00</div>
-              <h3>The meeting that ended on time</h3>
-              <p>
-                The agenda was agreed before anyone sat down. Neighbours upvoted what mattered,
-                minutes wrote themselves into the record, and the proxy votes were already counted.
-                Everyone was home for dinner — and nothing was left unsaid.
-              </p>
-            </div>
-            <div className="story-card">
-              <div className="story-card__kicker">Any day, any unit</div>
-              <h3>The budget everyone can finally see</h3>
-              <p>
-                No more “ask the treasurer”. Every euro in, every euro out, every fee and every
-                receipt — visible to every owner, all the time. Transparency isn’t a feature; it’s
-                how neighbours stay neighbours.
-              </p>
-            </div>
-            <div className="story-card">
-              <div className="story-card__kicker">Two streets over</div>
-              <h3>The plumber your neighbours already trust</h3>
-              <p>
-                The condo across the road found him first. They rated him, noted he’s reliable and
-                fair, and — because they’re on Condoclar too — your condo can see it. Good work
-                travels by word of mouth. Now it travels next door.
-              </p>
-            </div>
+            {copy.moments.map((m) => (
+              <div className="story-card" key={m.title}>
+                <div className="story-card__kicker">{m.kicker}</div>
+                <h3>{m.title}</h3>
+                <p>{m.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -157,30 +106,23 @@ export default function HomePage() {
         <div className="container">
           <div className="split">
             <div className="split__media">
-              <img
-                src="/media/neighbours-vendor.jpg"
-                alt="A local tradesperson greeting residents warmly outside their apartment building"
-                loading="lazy"
-              />
+              <img src="/media/neighbours-vendor.jpg" alt={copy.teaserImgAlt} loading="lazy" />
             </div>
             <div>
-              <span className="eyebrow">Neighbours helping neighbours</span>
-              <h2>Your best recommendation lives next door</h2>
-              <p className="prose">
-                Condoclar quietly connects your condominium with the ones around it. Vendors your
-                neighbouring condos trust appear in your directory — rated by real committees, with
-                real work behind them.
-              </p>
+              <span className="eyebrow">{copy.teaserEyebrow}</span>
+              <h2>{copy.teaserTitle}</h2>
+              <p className="prose">{copy.teaserProse}</p>
               <div className="privacy-note">
                 <LockOutlined style={{ fontSize: 22, marginTop: 2 }} />
                 <span>
-                  Shared between condos, <strong>never with the public internet</strong>. Your
-                  condo’s notes stay private, and only counts are shown — never your condo’s name.
+                  {copy.privacyPre}
+                  <strong>{copy.privacyStrong}</strong>
+                  {copy.privacyPost}
                 </span>
               </div>
               <p style={{ marginTop: 28 }}>
-                <Link to="/neighbours/" className="arrow-link">
-                  How the shared vendor directory works <ArrowRightOutlined />
+                <Link to={localePath(locale, '/neighbours/')} className="arrow-link">
+                  {copy.teaserLink} <ArrowRightOutlined />
                 </Link>
               </p>
             </div>
@@ -192,27 +134,24 @@ export default function HomePage() {
       <section className="section">
         <div className="container">
           <div style={{ textAlign: 'center' }}>
-            <span className="eyebrow">Questions, answered</span>
-            <h2>Fair questions from careful neighbours</h2>
+            <span className="eyebrow">{copy.faqEyebrow}</span>
+            <h2>{copy.faqTitle}</h2>
           </div>
           <div className="faq-wrap">
             <Collapse
               ghost
               size="large"
-              items={FAQ.map((f, i) => ({
+              items={copy.faq.map((f, i) => ({
                 key: String(i),
-                label: <strong>{f.question}</strong>,
-                children: <p style={{ fontSize: 17, lineHeight: 1.7, margin: 0 }}>{f.answer}</p>,
+                label: <strong>{f.q}</strong>,
+                children: <p style={{ fontSize: 17, lineHeight: 1.7, margin: 0 }}>{f.a}</p>,
               }))}
             />
           </div>
         </div>
       </section>
 
-      <CtaBand
-        title="Your neighbours are already home. Meet them there."
-        body="Start with one meeting, one vote or one trusted vendor. The community does the rest."
-      />
+      <CtaBand cta={copy.cta} />
     </main>
   );
 }

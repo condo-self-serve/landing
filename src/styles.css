@@ -222,6 +222,27 @@ h3 {
   border-bottom-color: var(--pollen);
 }
 
+.site-header__lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid rgba(0, 23, 31, 0.16);
+  background: transparent;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-family: inherit;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--deep);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.site-header__lang:hover {
+  border-color: var(--cerulean);
+  color: var(--cerulean);
+}
+
 /* Mobile header: logo + CTA on the first row, nav links on their own row
    below — nothing squeezes, nothing wraps mid-button. */
 @media (max-width: 760px) {
@@ -237,8 +258,10 @@ h3 {
     font-size: 19px;
   }
 
-  .site-header__cta {
+  .site-header__lang {
     margin-left: auto;
+    padding: 5px 10px;
+    font-size: 13px;
   }
 
   .site-header .site-header__cta.ant-btn {

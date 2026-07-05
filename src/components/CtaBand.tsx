@@ -1,21 +1,16 @@
 import { Button } from 'antd';
 import { ArrowRightOutlined } from '@ant-design/icons';
 import { APP_URL } from '../siteMeta';
+import type { CtaCopy } from '../i18n/types';
 
-interface Props {
-  title: string;
-  body: string;
-  buttonLabel?: string;
-}
-
-export default function CtaBand({ title, body, buttonLabel = 'Bring your condo together' }: Props) {
+export default function CtaBand({ cta }: { cta: CtaCopy }) {
   return (
     <section className="section--ink cta-band">
       <div className="container">
-        <h2>{title}</h2>
-        <p>{body}</p>
+        <h2>{cta.title}</h2>
+        <p>{cta.body}</p>
         <Button type="primary" size="large" href={APP_URL} icon={<ArrowRightOutlined />} iconPosition="end">
-          {buttonLabel}
+          {cta.button}
         </Button>
       </div>
     </section>

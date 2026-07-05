@@ -11,260 +11,83 @@ import {
   TeamOutlined,
   ToolOutlined,
 } from '@ant-design/icons';
+import { useCopy } from '../i18n';
 import CtaBand from '../components/CtaBand';
 
-interface MiniFeature {
-  icon: React.ReactNode;
-  title: string;
-  body: React.ReactNode;
-}
+// Structure (images, icons, layout) stays here; all prose lives in the copy
+// decks. Order must match copy.features.clusters and each cluster's features.
+const CLUSTER_MEDIA = [
+  { src: '/media/app-vote.webp', appShot: true, reverse: false },
+  { src: '/media/app-fees.webp', appShot: true, reverse: true },
+  { src: '/media/app-jobs.webp', appShot: true, reverse: false },
+  { src: '/media/belong-steps.jpg', appShot: false, reverse: true },
+];
 
-interface Cluster {
-  eyebrow: string;
-  title: string;
-  intro: string;
-  image: { src: string; alt: string; appShot?: boolean };
-  reverse?: boolean;
-  features: MiniFeature[];
-}
-
-const CLUSTERS: Cluster[] = [
-  {
-    eyebrow: 'Decide together',
-    title: 'Meetings and votes that belong to everyone',
-    intro:
-      'The condo meeting is where community is made or lost. Condoclar makes it something neighbours look forward to — short, fair, and finished on time.',
-    image: {
-      src: '/media/app-vote.webp',
-      alt: 'Condoclar vote screen showing a live ballot with results, quorum and participation',
-      appShot: true,
-    },
-    features: [
-      {
-        icon: <CalendarOutlined />,
-        title: 'Meetings that respect everyone’s evening',
-        body: (
-          <>
-            Neighbours propose agenda items and upvote what matters. RSVPs, proxy voting, calendar
-            invites and minutes recorded forever. <strong>So the meeting is about deciding, not
-            arguing about what to discuss.</strong>
-          </>
-        ),
-      },
-      {
-        icon: <CheckSquareOutlined />,
-        title: 'Votes and ballots, done properly',
-        body: (
-          <>
-            Formal votes with real ballots, clear outcomes and a permanent record — including the
-            owners who couldn’t make it to the room. <strong>So decisions are made by the
-            community, not by whoever stayed latest.</strong>
-          </>
-        ),
-      },
-    ],
-  },
-  {
-    eyebrow: 'Money in the open',
-    title: 'Finances every neighbour can read',
-    intro:
-      'Most tension in a condominium is really about money nobody can see. Condoclar puts every euro in daylight — and takes the awkward conversations off people’s shoulders.',
-    image: {
-      src: '/media/app-fees.webp',
-      alt: 'Condoclar fees screen with the fee schedule, expected and collected totals per unit',
-      appShot: true,
-    },
-    reverse: true,
-    features: [
-      {
-        icon: <EuroCircleOutlined />,
-        title: 'Budgets everyone can read',
-        body: (
-          <>
-            Categories, transactions and running totals in plain sight, with CSV import and a
-            preview before anything is committed. <strong>So “where does the money go?” is a
-            question nobody needs to ask.</strong>
-          </>
-        ),
-      },
-      {
-        icon: <AuditOutlined />,
-        title: 'Fees without the awkwardness',
-        body: (
-          <>
-            Fee schedules, payment tracking and a clear overview of who has paid — handled by the
-            system, not by a neighbour knocking on doors. <strong>So money never has to come
-            between neighbours.</strong>
-          </>
-        ),
-      },
-      {
-        icon: <FileProtectOutlined />,
-        title: 'Documents, safe and findable',
-        body: (
-          <>
-            Contracts, financial documents and files in one place with visibility controls decided
-            by your condo. <strong>So the answer is never “it’s in someone’s drawer at
-            home”.</strong>
-          </>
-        ),
-      },
-      {
-        icon: <FileTextOutlined />,
-        title: 'Monthly reports, written for humans',
-        body: (
-          <>
-            A clear monthly summary of activity, finances and decisions — generated for you.
-            <strong> So everyone stays informed without anyone doing the informing.</strong>
-          </>
-        ),
-      },
-    ],
-  },
-  {
-    eyebrow: 'Care for the building',
-    title: 'From “someone should…” to done',
-    intro:
-      'A building stays loved when small problems get fixed early, by people you trust. Condoclar turns maintenance from a burden into a rhythm.',
-    image: {
-      src: '/media/app-jobs.webp',
-      alt: 'Condoclar jobs board tracking maintenance requests from submission through completion',
-      appShot: true,
-    },
-    features: [
-      {
-        icon: <ToolOutlined />,
-        title: 'Maintenance jobs with a memory',
-        body: (
-          <>
-            Report a problem, discuss it, vote on priorities, link a trusted vendor and track the
-            job to completion — with photos of the finished work. <strong>So small problems get
-            fixed before they become big ones.</strong>
-          </>
-        ),
-      },
-      {
-        icon: <ShopOutlined />,
-        title: 'A vendor directory shared with condos near you',
-        body: (
-          <>
-            Tradespeople recommended and rated by real neighbouring condominiums — privately, never
-            on the public internet. <strong>So you hire on your neighbours’ word, not a stranger’s
-            review.</strong>
-          </>
-        ),
-      },
-    ],
-  },
-  {
-    eyebrow: 'Room for everyone',
-    title: 'A community that’s easy to join and easy to hear',
-    intro:
-      'Software only builds community if every neighbour can take part — whatever their language, schedule or patience for apps.',
-    image: {
-      src: '/media/belong-steps.jpg',
-      alt: 'Neighbours of different generations sharing food on the front steps of their building',
-    },
-    reverse: true,
-    features: [
-      {
-        icon: <TeamOutlined />,
-        title: 'Members, invitations and join links',
-        body: (
-          <>
-            Invite by email or share a join link — one tap and they’re in, with roles that keep
-            duties clear. <strong>So joining is the easiest thing your building does.</strong>
-          </>
-        ),
-      },
-      {
-        icon: <NotificationOutlined />,
-        title: 'Notifications that respect attention',
-        body: (
-          <>
-            Each neighbour chooses what to be told about and how. <strong>So the app works for you
-            — never the other way round.</strong>
-          </>
-        ),
-      },
-      {
-        icon: <GlobalOutlined />,
-        title: 'Six languages, one community',
-        body: (
-          <>
-            English, Português, Español, Français, Italiano and Deutsch. <strong>So language is
-            never the reason someone stays quiet.</strong>
-          </>
-        ),
-      },
-    ],
-  },
+const CLUSTER_ICONS = [
+  [<CalendarOutlined key="i" />, <CheckSquareOutlined key="i" />],
+  [<EuroCircleOutlined key="i" />, <AuditOutlined key="i" />, <FileProtectOutlined key="i" />, <FileTextOutlined key="i" />],
+  [<ToolOutlined key="i" />, <ShopOutlined key="i" />],
+  [<TeamOutlined key="i" />, <NotificationOutlined key="i" />, <GlobalOutlined key="i" />],
 ];
 
 export default function FeaturesPage() {
+  const copy = useCopy().features;
+
   return (
     <main>
       <section className="hero hero--page">
         <div className="hero__media">
-          <img
-            src="/media/feature-meeting.jpg"
-            alt="Residents of a condominium having a relaxed, friendly meeting together"
-            fetchPriority="high"
-          />
+          <img src="/media/feature-meeting.jpg" alt={copy.heroAlt} fetchPriority="high" />
         </div>
         <div className="container">
           <div className="hero__inner">
-            <span className="eyebrow">What Condoclar does</span>
-            <h1>Everything your condo needs. Nothing it doesn’t.</h1>
-            <p className="lede">
-              Each feature exists for one reason: to hand time and goodwill back to your community.
-              Here’s the full picture — and why each piece matters.
-            </p>
+            <span className="eyebrow">{copy.heroEyebrow}</span>
+            <h1>{copy.heroTitle}</h1>
+            <p className="lede">{copy.heroLede}</p>
           </div>
         </div>
       </section>
 
-      {CLUSTERS.map((cluster) => (
-        <section className="cluster" key={cluster.eyebrow}>
-          <div className="container">
-            <div className={`split${cluster.reverse ? ' split--reverse' : ''}`}>
-              <div className={`split__media${cluster.image.appShot ? ' split__media--app' : ''}`}>
-                <img src={cluster.image.src} alt={cluster.image.alt} loading="lazy" />
-              </div>
-              <div>
-                <span className="eyebrow">{cluster.eyebrow}</span>
-                <h2>{cluster.title}</h2>
-                <p className="cluster__intro">{cluster.intro}</p>
-                <ul className="mini-features">
-                  {cluster.features.map((f) => (
-                    <li className="mini-feature" key={f.title}>
-                      <div className="mini-feature__icon">{f.icon}</div>
-                      <div>
-                        <h3>{f.title}</h3>
-                        <p>{f.body}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
+      {copy.clusters.map((cluster, ci) => {
+        const media = CLUSTER_MEDIA[ci];
+        return (
+          <section className="cluster" key={cluster.eyebrow}>
+            <div className="container">
+              <div className={`split${media.reverse ? ' split--reverse' : ''}`}>
+                <div className={`split__media${media.appShot ? ' split__media--app' : ''}`}>
+                  <img src={media.src} alt={cluster.imageAlt} loading="lazy" />
+                </div>
+                <div>
+                  <span className="eyebrow">{cluster.eyebrow}</span>
+                  <h2>{cluster.title}</h2>
+                  <p className="cluster__intro">{cluster.intro}</p>
+                  <ul className="mini-features">
+                    {cluster.features.map((f, fi) => (
+                      <li className="mini-feature" key={f.title}>
+                        <div className="mini-feature__icon">{CLUSTER_ICONS[ci][fi]}</div>
+                        <div>
+                          <h3>{f.title}</h3>
+                          <p>
+                            {f.body} <strong>{f.so}</strong>
+                          </p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-      ))}
+          </section>
+        );
+      })}
 
       <section className="section--parchment section--tight">
         <div className="container">
-          <blockquote className="pull-quote">
-            Software should disappear into the background, the way good plumbing does. You notice
-            it only by the calm it leaves behind.
-          </blockquote>
+          <blockquote className="pull-quote">{copy.quote}</blockquote>
         </div>
       </section>
 
-      <CtaBand
-        title="Less admin. More neighbourhood."
-        body="Start with the feature your condo needs most — the rest will be waiting when you’re ready."
-      />
+      <CtaBand cta={copy.cta} />
     </main>
   );
 }

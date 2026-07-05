@@ -5,6 +5,26 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Condoclar</title>
+    <script>
+      // First-visit language autoload: send the visitor to their browser's
+      // language if we publish it. An explicit choice from the language
+      // switcher (localStorage) always wins; crawlers (no JS) stay on the
+      // English pages and follow the hreflang alternates instead.
+      (function () {
+        try {
+          var langs = ['pt', 'es', 'fr', 'it', 'de'];
+          var seg = location.pathname.split('/')[1];
+          if (langs.indexOf(seg) !== -1) return; // already on a localised page
+          var pref = localStorage.getItem('condoclar-lang');
+          var want = pref || (navigator.language || 'en').slice(0, 2).toLowerCase();
+          if (langs.indexOf(want) !== -1) {
+            location.replace('/' + want + location.pathname + location.search + location.hash);
+          }
+        } catch (e) {
+          /* storage unavailable — stay on English */
+        }
+      })();
+    </script>
     <!--app-head-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
