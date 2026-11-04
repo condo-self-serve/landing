@@ -39,6 +39,14 @@ const en: Copy = {
     languageLabel: 'Language',
   },
 
+  comingSoon: {
+    eyebrow: 'Pardon our dust',
+    title: 'Something new is on the way',
+    body: 'Condoclar is getting a big redesign, and we’re heads-down building it. Sign-ups are paused while we do — we’d rather you meet the new Condoclar than the old one.',
+    comeBack: 'Check back in about a month. It’ll be worth the wait.',
+    button: 'See you then',
+  },
+
   footer: {
     tagline:
       'A condominium is a community. Condoclar is its digital home — removing the busywork so neighbours can focus on the good.',

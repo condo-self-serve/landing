@@ -1,13 +1,14 @@
 import { Button, Collapse } from 'antd';
 import { ArrowRightOutlined, LockOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
-import { APP_URL } from '../siteMeta';
 import { localePath, useCopy, useLocale } from '../i18n';
 import CtaBand from '../components/CtaBand';
+import { useComingSoon } from '../components/ComingSoon';
 
 export default function HomePage() {
   const copy = useCopy().home;
   const locale = useLocale();
+  const comingSoon = useComingSoon();
 
   return (
     <main>
@@ -27,12 +28,19 @@ export default function HomePage() {
             </h1>
             <p className="lede">{copy.heroLede}</p>
             <div className="hero__actions">
-              <Button type="primary" size="large" href={APP_URL} icon={<ArrowRightOutlined />} iconPosition="end">
+              <Button
+                type="primary"
+                size="large"
+                onClick={comingSoon.open}
+                icon={<ArrowRightOutlined />}
+                iconPosition="end"
+              >
                 {copy.ctaPrimary}
               </Button>
               <Button size="large" ghost href={localePath(locale, '/features/')}>
                 {copy.ctaSecondary}
               </Button>
+              {comingSoon.modal}
             </div>
           </div>
         </div>

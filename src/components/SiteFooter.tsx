@@ -1,6 +1,7 @@
 import { GlobalOutlined } from '@ant-design/icons';
 import { Link, useLocation } from 'react-router-dom';
 import { APP_URL } from '../siteMeta';
+import { useComingSoon } from './ComingSoon';
 import {
   COPY,
   LOCALES,
@@ -18,6 +19,7 @@ export default function SiteFooter() {
   const { pathname } = useLocation();
   const { path } = parsePath(pathname);
   const p = (to: string) => localePath(locale, to);
+  const comingSoon = useComingSoon();
 
   const remember = (code: LocaleCode) => persistLocale(code, { explicit: true });
 
@@ -39,9 +41,18 @@ export default function SiteFooter() {
             <Link to={p('/manifesto/')}>{copy.footer.manifesto}</Link>
           </nav>
           <nav aria-label="Product">
-            <a href={APP_URL}>{copy.footer.openApp}</a>
+            <a
+              href={APP_URL}
+              onClick={(event) => {
+                event.preventDefault();
+                comingSoon.open();
+              }}
+            >
+              {copy.footer.openApp}
+            </a>
             <a href={`${APP_URL}/users/help`}>{copy.footer.help}</a>
           </nav>
+          {comingSoon.modal}
         </div>
         {/* Every language in its own name — always available down here. */}
         <nav className="site-footer__langs" aria-label={copy.header.languageLabel}>

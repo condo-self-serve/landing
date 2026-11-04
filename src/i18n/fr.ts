@@ -39,6 +39,14 @@ const fr: Copy = {
     languageLabel: 'Langue',
   },
 
+  comingSoon: {
+    eyebrow: 'Travaux en cours',
+    title: 'Du nouveau arrive',
+    body: 'Condoclar fait peau neuve et nous sommes entièrement mobilisés pour le construire. En attendant, les inscriptions sont en pause : nous préférons que vous découvriez le nouveau Condoclar plutôt que l’ancien.',
+    comeBack: 'Revenez dans un mois environ. L’attente en vaudra la peine.',
+    button: 'À bientôt',
+  },
+
   footer: {
     tagline:
       'Une copropriété est une communauté. Condoclar est son foyer numérique — il élimine la paperasse pour que les voisins se consacrent à l’essentiel.',

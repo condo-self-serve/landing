@@ -6,9 +6,9 @@ import {
   StarOutlined,
   TeamOutlined,
 } from '@ant-design/icons';
-import { APP_URL } from '../siteMeta';
 import { useCopy } from '../i18n';
 import CtaBand from '../components/CtaBand';
+import { useComingSoon } from '../components/ComingSoon';
 
 // Order matches copy.neighbours.trust.
 const TRUST_ICONS = [
@@ -20,6 +20,7 @@ const TRUST_ICONS = [
 
 export default function NeighboursPage() {
   const copy = useCopy().neighbours;
+  const comingSoon = useComingSoon();
 
   return (
     <main>
@@ -72,9 +73,16 @@ export default function NeighboursPage() {
               <h2>{copy.proofTitle}</h2>
               <p className="prose">{copy.proofP1}</p>
               <p className="prose">{copy.proofP2}</p>
-              <Button type="primary" size="large" href={APP_URL} icon={<ArrowRightOutlined />} iconPosition="end">
+              <Button
+                type="primary"
+                size="large"
+                onClick={comingSoon.open}
+                icon={<ArrowRightOutlined />}
+                iconPosition="end"
+              >
                 {copy.proofButton}
               </Button>
+              {comingSoon.modal}
             </div>
           </div>
         </div>

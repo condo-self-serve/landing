@@ -39,6 +39,14 @@ const de: Copy = {
     languageLabel: 'Sprache',
   },
 
+  comingSoon: {
+    eyebrow: 'Wir bauen um',
+    title: 'Etwas Neues ist unterwegs',
+    body: 'Condoclar bekommt ein großes Redesign, und wir stecken mitten im Bau. Die Anmeldung pausiert so lange — wir möchten, dass Sie das neue Condoclar kennenlernen, nicht das alte.',
+    comeBack: 'Schauen Sie in etwa einem Monat wieder vorbei. Das Warten wird sich lohnen.',
+    button: 'Bis dann',
+  },
+
   footer: {
     tagline:
       'Eine Eigentümergemeinschaft ist eine Gemeinschaft. Condoclar ist ihr digitales Zuhause — es räumt die Bürokratie weg, damit Nachbarn sich dem Guten widmen können.',

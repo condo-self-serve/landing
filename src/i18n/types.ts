@@ -48,6 +48,15 @@ export interface Copy {
     languageLabel: string;
   };
 
+  /** Shown instead of opening the app while sign-ups are paused for the redesign. */
+  comingSoon: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    comeBack: string;
+    button: string;
+  };
+
   footer: {
     tagline: string;
     why: string;

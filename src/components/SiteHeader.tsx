@@ -1,7 +1,7 @@
 import { Button, Dropdown } from 'antd';
 import { DownOutlined, GlobalOutlined } from '@ant-design/icons';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { APP_URL } from '../siteMeta';
+import { useComingSoon } from './ComingSoon';
 import {
   COPY,
   LOCALES,
@@ -20,6 +20,7 @@ export default function SiteHeader() {
   const copy = useCopy();
   const { path } = parsePath(pathname);
   const normalised = path.endsWith('/') ? path : `${path}/`;
+  const comingSoon = useComingSoon();
 
   const nav = [
     { to: '/', label: copy.header.why },
@@ -71,9 +72,10 @@ export default function SiteHeader() {
             <GlobalOutlined /> {COPY[locale].langName} <DownOutlined style={{ fontSize: 10 }} />
           </button>
         </Dropdown>
-        <Button type="primary" size="middle" href={APP_URL} className="site-header__cta">
+        <Button type="primary" size="middle" onClick={comingSoon.open} className="site-header__cta">
           {copy.header.openApp}
         </Button>
+        {comingSoon.modal}
       </div>
     </header>
   );

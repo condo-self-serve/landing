@@ -39,6 +39,14 @@ const es: Copy = {
     languageLabel: 'Idioma',
   },
 
+  comingSoon: {
+    eyebrow: 'Perdona el desorden',
+    title: 'Algo nuevo está en camino',
+    body: 'Condoclar está recibiendo un gran rediseño y estamos concentrados en construirlo. Mientras tanto, las inscripciones están en pausa: preferimos que conozcas el nuevo Condoclar y no el antiguo.',
+    comeBack: 'Vuelve dentro de un mes aproximadamente. La espera valdrá la pena.',
+    button: 'Hasta entonces',
+  },
+
   footer: {
     tagline:
       'Una comunidad de propietarios es una comunidad. Condoclar es su hogar digital: elimina el papeleo para que los vecinos se centren en lo bueno.',
