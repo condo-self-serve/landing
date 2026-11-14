@@ -29,8 +29,7 @@ export default function SiteFooter() {
         <div className="site-footer__inner">
           <div>
             <div className="site-footer__brand">
-              <img src="/favicon.svg" alt="" />
-              Condoclar
+              <img src="/condoclar-logo-reverse.svg" alt="Condoclar" width="128" height="30" />
             </div>
             <p className="site-footer__tagline">{copy.footer.tagline}</p>
           </div>

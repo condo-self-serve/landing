@@ -40,8 +40,7 @@ export default function SiteHeader() {
     <header className="site-header">
       <div className="container site-header__inner">
         <Link to={localePath(locale, '/')} className="site-header__brand" aria-label="Condoclar">
-          <img src="/favicon.svg" alt="" />
-          <span>Condoclar</span>
+          <img src="/condoclar-logo.svg" alt="Condoclar" width="137" height="32" />
         </Link>
         <nav className="site-header__nav" aria-label="Main">
           {nav.map((item) => {

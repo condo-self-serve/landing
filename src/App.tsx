@@ -11,6 +11,13 @@ import FeaturesPage from './pages/FeaturesPage';
 import NeighboursPage from './pages/NeighboursPage';
 import ManifestoPage from './pages/ManifestoPage';
 import NotFoundPage from './pages/NotFoundPage';
+// Brand fonts, self-hosted (no Google Fonts requests), then the site's styles.
+import '@fontsource/plus-jakarta-sans/600.css';
+import '@fontsource/plus-jakarta-sans/700.css';
+import '@fontsource/plus-jakarta-sans/800.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
 import './styles.css';
 
 /** Keeps title/description/lang in sync on client-side navigation (prerendered
