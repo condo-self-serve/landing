@@ -3,10 +3,11 @@ import { ConfigProvider } from 'antd';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { landingTheme } from './theme';
 import { pageForPath } from './siteMeta';
-import { LocaleContext, LOCALES, localePath, parsePath, persistLocale } from './i18n';
+import { COPY, LocaleContext, LOCALES, localePath, parsePath, persistLocale } from './i18n';
 import SiteHeader from './components/SiteHeader';
 import SiteFooter from './components/SiteFooter';
 import HomePage from './pages/HomePage';
+import CompanyPage from './pages/CompanyPage';
 import FeaturesPage from './pages/FeaturesPage';
 import NeighboursPage from './pages/NeighboursPage';
 import ManifestoPage from './pages/ManifestoPage';
@@ -53,6 +54,7 @@ export default function App() {
           {LOCALES.map((code) => (
             <Route key={code} path={localePath(code, '/')}>
               <Route index element={<HomePage />} />
+              {COPY[code].company && <Route path="management-companies" element={<CompanyPage />} />}
               <Route path="features" element={<FeaturesPage />} />
               <Route path="neighbours" element={<NeighboursPage />} />
               <Route path="manifesto" element={<ManifestoPage />} />

@@ -2,6 +2,7 @@ import { Button, Dropdown } from 'antd';
 import { DownOutlined, GlobalOutlined } from '@ant-design/icons';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useComingSoon } from './ComingSoon';
+import { PAGE_PATHS, hasPage, pageForPath } from '../siteMeta';
 import {
   COPY,
   LOCALES,
@@ -21,8 +22,10 @@ export default function SiteHeader() {
   const { path } = parsePath(pathname);
   const normalised = path.endsWith('/') ? path : `${path}/`;
   const comingSoon = useComingSoon();
+  const pageKey = pageForPath(pathname).key;
 
   const nav = [
+    ...(copy.header.company ? [{ to: PAGE_PATHS.company, label: copy.header.company }] : []),
     { to: '/', label: copy.header.why },
     { to: '/features/', label: copy.header.features },
     { to: '/neighbours/', label: copy.header.neighbours },
@@ -33,7 +36,8 @@ export default function SiteHeader() {
   // Deutsch always reads "Deutsch" — so anyone can find their way home.
   const switchTo = (code: LocaleCode) => {
     persistLocale(code, { explicit: true });
-    navigate(localePath(code, normalised));
+    // A page the other language does not have yet falls back to its home.
+    navigate(localePath(code, hasPage(pageKey, code) ? normalised : '/'));
   };
 
   return (

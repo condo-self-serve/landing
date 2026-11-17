@@ -27,6 +27,53 @@ export interface CtaCopy {
   button: string;
 }
 
+/** The page for management companies. Optional until every locale has it: a locale without it has no such page. */
+export interface CompanyCopy {
+  heroEyebrow: string;
+  heroTitle: string;
+  heroLede: string;
+  heroAlt: string;
+  ctaPrimary: string;
+  ctaSecondary: string;
+  /** Accessible name of the explainer video, and the line under it. */
+  videoLabel: string;
+  videoCaption: string;
+  painEyebrow: string;
+  painTitle: string;
+  pains: { kicker: string; title: string; body: string }[];
+  howEyebrow: string;
+  howTitle: string;
+  steps: { title: string; body: string }[];
+  clusters: ClusterCopy[];
+  startEyebrow: string;
+  startTitle: string;
+  start: { title: string; body: string }[];
+  faqEyebrow: string;
+  faqTitle: string;
+  faq: { q: string; a: string }[];
+  cta: CtaCopy;
+  /** The "Book a demo" form. */
+  demo: {
+    title: string;
+    intro: string;
+    name: string;
+    nameRequired: string;
+    email: string;
+    emailRequired: string;
+    company: string;
+    buildings: string;
+    message: string;
+    messagePlaceholder: string;
+    submit: string;
+    note: string;
+    sentTitle: string;
+    sentBody: string;
+    close: string;
+    error: string;
+    errorBusy: string;
+  };
+}
+
 export interface Copy {
   /** The language's own name for itself — shown in the switcher. */
   langName: string;
@@ -37,9 +84,12 @@ export interface Copy {
     neighbours: PageMetaCopy;
     manifesto: PageMetaCopy;
     notFound: PageMetaCopy;
+    company?: PageMetaCopy;
   };
 
   header: {
+    /** Menu label for the management company page, where the locale has one. */
+    company?: string;
     why: string;
     features: string;
     neighbours: string;
@@ -160,4 +210,6 @@ export interface Copy {
     lede: string;
     button: string;
   };
+
+  company?: CompanyCopy;
 }

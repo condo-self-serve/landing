@@ -7,11 +7,12 @@ export const SITE_URL = 'https://condoclar.eu';
 export const APP_URL = 'https://app.condoclar.eu';
 export const SITE_NAME = 'Condoclar';
 
-export type PageKey = 'home' | 'features' | 'neighbours' | 'manifesto' | 'notFound';
+export type PageKey = 'home' | 'company' | 'features' | 'neighbours' | 'manifesto' | 'notFound';
 
 /** Locale-less route for each page; locale prefixes are applied on top. */
 export const PAGE_PATHS: Record<PageKey, string> = {
   home: '/',
+  company: '/management-companies/',
   features: '/features/',
   neighbours: '/neighbours/',
   manifesto: '/manifesto/',
@@ -20,11 +21,15 @@ export const PAGE_PATHS: Record<PageKey, string> = {
 
 const OG_IMAGES: Record<PageKey, string> = {
   home: '/media/hero-courtyard.jpg',
+  company: '/media/manifesto-evening.jpg',
   features: '/media/feature-meeting.jpg',
   neighbours: '/media/neighbours-vendor.jpg',
   manifesto: '/media/manifesto-evening.jpg',
   notFound: '/media/hero-courtyard.jpg',
 };
+
+/** Whether a locale has a page: the management company page exists only where its copy is written. */
+export const hasPage = (key: PageKey, locale: LocaleCode): boolean => key !== 'company' || !!COPY[locale].company;
 
 export interface PageMeta {
   key: PageKey;
@@ -40,7 +45,8 @@ export interface PageMeta {
 }
 
 function buildPage(key: PageKey, locale: LocaleCode): PageMeta {
-  const meta = COPY[locale].meta[key];
+  // Callers only build pages the locale has (see hasPage).
+  const meta = COPY[locale].meta[key]!;
   return {
     key,
     locale,
@@ -58,6 +64,7 @@ function buildPage(key: PageKey, locale: LocaleCode): PageMeta {
 export const PAGES: PageMeta[] = LOCALES.flatMap((locale) =>
   (Object.keys(PAGE_PATHS) as PageKey[])
     .filter((key) => key !== 'notFound' || locale === DEFAULT_LOCALE)
+    .filter((key) => hasPage(key, locale))
     .map((key) => buildPage(key, locale)),
 );
 
@@ -65,5 +72,5 @@ export function pageForPath(pathname: string): PageMeta {
   const { locale, path } = parsePath(pathname);
   const normalised = path.endsWith('/') ? path : `${path}/`;
   const key = (Object.keys(PAGE_PATHS) as PageKey[]).find((k) => PAGE_PATHS[k] === normalised);
-  return buildPage(key ?? 'notFound', locale);
+  return buildPage(key && hasPage(key, locale) ? key : 'notFound', locale);
 }

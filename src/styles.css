@@ -603,12 +603,49 @@ h3 {
   box-shadow: 0 32px 80px rgba(14, 42, 71, 0.22);
 }
 
+.app-showcase video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: var(--navy);
+  border-radius: 14px;
+  border: 1px solid rgba(14, 42, 71, 0.12);
+  box-shadow: 0 32px 80px rgba(14, 42, 71, 0.22);
+}
+
 .app-showcase figcaption {
   text-align: center;
   margin-top: 18px;
   font-size: 15px;
   color: var(--cc-slate);
   font-weight: 600;
+}
+
+/* A phone screenshot in a split: narrow, tall, with a plain device edge. */
+.split__media--phone {
+  display: flex;
+  justify-content: center;
+}
+
+.split__media--phone img {
+  width: min(300px, 78%);
+  aspect-ratio: auto;
+  border-radius: 34px;
+  border: 9px solid var(--navy);
+  box-shadow: 0 24px 60px rgba(14, 42, 71, 0.22);
+}
+
+/* The same mini features laid side by side, for a short "getting started" strip. */
+.mini-features--row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.mini-features--row .mini-feature__icon {
+  background: #fff;
 }
 
 /* ---------- numbered steps ---------- */
@@ -961,4 +998,41 @@ h3 {
 :focus-visible {
   outline: none;
   box-shadow: var(--cc-focus-ring);
+}
+
+/* ---------- "Book a demo" form ---------- */
+
+.demo-form__intro {
+  margin: 0 0 20px;
+  color: var(--cc-slate);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.demo-form__row {
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  gap: 0 16px;
+}
+
+@media (max-width: 520px) {
+  .demo-form__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Kept in the page for scripts to find, off-screen for people. */
+.demo-form__trap {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.demo-form__note {
+  margin: 12px 0 0;
+  text-align: center;
+  font-size: 13px;
+  color: var(--cc-slate);
 }

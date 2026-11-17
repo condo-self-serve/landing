@@ -1,6 +1,6 @@
 import { GlobalOutlined } from '@ant-design/icons';
 import { Link, useLocation } from 'react-router-dom';
-import { APP_URL } from '../siteMeta';
+import { APP_URL, hasPage, pageForPath } from '../siteMeta';
 import { useComingSoon } from './ComingSoon';
 import {
   COPY,
@@ -59,7 +59,7 @@ export default function SiteFooter() {
           {LOCALES.map((code) => (
             <Link
               key={code}
-              to={localePath(code, path)}
+              to={localePath(code, hasPage(pageForPath(pathname).key, code) ? path : '/')}
               onClick={() => remember(code)}
               className={code === locale ? 'site-footer__lang--current' : undefined}
               aria-current={code === locale ? 'true' : undefined}
