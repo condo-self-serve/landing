@@ -27,7 +27,7 @@ const en: Copy = {
     company: {
       title: 'Condoclar for management companies: every building, one board',
       description:
-        'Owners write by email or WhatsApp. Condoclar turns each message into a job with the building, unit and priority suggested, on one board for every condominium you manage.',
+        'Condoclar gives management companies one place to run every condominium they manage. Book a demo and we will show you how it would work for your buildings.',
     },
     notFound: {
       title: 'Page not found | Condoclar',
@@ -399,19 +399,16 @@ const en: Copy = {
     heroEyebrow: 'For management companies',
     heroTitle: 'Every building. Every request. One board.',
     heroLede:
-      'Owners write to you as they always have, by email or WhatsApp. Condoclar turns each message into a job, sorted by building, so your team spends the day fixing things instead of keeping track of them.',
+      'Condoclar gives your team one calm place to run every condominium you manage, so the day goes on fixing things instead of keeping track of them. Talk to us and we will show you how.',
     heroAlt: 'A modern apartment building at dusk with warmly lit balconies and windows',
     ctaPrimary: 'Book a demo',
-    ctaSecondary: 'See every feature',
-    videoLabel: 'Condoclar in one minute: every building, one board',
-    videoCaption: 'Condoclar in one minute.',
     painEyebrow: 'The job behind the job',
     painTitle: 'Most of the day goes on keeping track',
     pains: [
       {
         kicker: 'Monday, 08:40',
         title: 'Sixty messages, six places',
-        body: 'A leak by email, a broken gate on WhatsApp, a missed call about the lift. Before anyone can fix anything, somebody has to work out which building each one is about.',
+        body: 'A leak, a broken gate, a missed call about the lift. Before anyone can fix anything, somebody has to work out which building each one is about.',
       },
       {
         kicker: 'Wednesday, 15:10',
@@ -424,165 +421,41 @@ const en: Copy = {
         body: 'Every building wants to know what was done. The answers are scattered across inboxes, phones and one colleague’s memory.',
       },
     ],
-    howEyebrow: 'How it works',
-    howTitle: 'From message to done, without the retyping',
-    steps: [
+    outcomesEyebrow: 'What changes',
+    outcomesTitle: 'A calmer week, in every building',
+    outcomes: [
       {
-        title: 'Owners write as they do today',
-        body: 'Connect your mailbox and your WhatsApp number. Nothing changes for owners, and nobody has to install anything.',
+        title: 'Nothing gets lost',
+        body: 'Every request from every building is in one place, with someone clearly responsible for it.',
       },
       {
-        title: 'Each message becomes a job',
-        body: 'Condoclar reads it and suggests the building, the unit, the category and the priority. You check it and move it to To do.',
+        title: 'Owners stop chasing',
+        body: 'Owners can see where things stand, so your team is not interrupted to tell them.',
       },
       {
-        title: 'Everyone sees where it stands',
-        body: 'Your team works from one board. Owners follow their own reports, and each building gets its monthly report without anyone writing it.',
-      },
-    ],
-    clusters: [
-      {
-        eyebrow: 'Incoming',
-        title: 'One inbox for every building',
-        intro: 'Email, WhatsApp and reports made in the app all arrive in the same list, already sorted.',
-        imageAlt:
-          'An incoming WhatsApp report open in Condoclar, with the suggested category, priority and assignee beside it',
-        features: [
-          {
-            title: 'Email and WhatsApp, connected once',
-            body: 'Gmail, Microsoft 365 or any other mailbox, plus your WhatsApp number.',
-            so: 'So owners keep writing the way they already do.',
-          },
-          {
-            title: 'Suggested, never decided for you',
-            body: 'Building, unit, category, priority and who should take it are proposed, each with how sure the suggestion is.',
-            so: 'So you confirm in a tap instead of typing it all in.',
-          },
-          {
-            title: 'Repeats are spotted',
-            body: 'A second message about the same leak is offered as an addition to the job you already have.',
-            so: 'So one problem stays one job, however many people report it.',
-          },
-        ],
-      },
-      {
-        eyebrow: 'All jobs',
-        title: 'One board across every condominium',
-        intro: 'To do, On hold, In progress, Done. Every card says which building it belongs to.',
-        imageAlt: 'The Condoclar jobs board showing jobs from several condominiums in four columns',
-        features: [
-          {
-            title: 'Filter to what you need',
-            body: 'By building, team member, vendor, age or only what is overdue.',
-            so: 'So Monday’s question, “what is waiting on us?”, has an answer.',
-          },
-          {
-            title: 'A team with clear patches',
-            body: 'Give each colleague all buildings or only some. Assign a job, or let them pick it up.',
-            so: 'So nothing sits unowned and nobody sees what is not theirs.',
-          },
-          {
-            title: 'Your vendors, in one list',
-            body: 'Add a plumber once, tick the buildings they serve, and link them to the jobs they do.',
-            so: 'So the right number is to hand in every building.',
-          },
-        ],
-      },
-      {
-        eyebrow: 'Insights and reports',
-        title: 'Know where you stand before anyone asks',
-        intro: 'The numbers a manager needs on a Monday, without building a spreadsheet to get them.',
-        imageAlt:
-          'Condoclar insights: open and overdue jobs, the buildings with most overdue jobs and the team workload',
-        features: [
-          {
-            title: 'Overdue, by building',
-            body: 'Due dates follow the priority you set. Anything late is counted and one tap away.',
-            so: 'So the building that is slipping is the first thing you see.',
-          },
-          {
-            title: 'Who is carrying what',
-            body: 'Open jobs per team member, with the overdue ones marked.',
-            so: 'So work is shared out on facts.',
-          },
-          {
-            title: 'Monthly reports that write themselves',
-            body: 'Each building gets a report of what was raised, done and still open, ready to share or download.',
-            so: 'So month end is a click, not a week.',
-          },
-        ],
-      },
-      {
-        eyebrow: 'For the owners',
-        title: 'Fewer “any update?” messages',
-        intro: 'Owners are part of it too, as much or as little as they want.',
-        imageAlt: 'The Condoclar overview on a phone: new reports, unassigned jobs and condominiums needing attention',
-        features: [
-          {
-            title: 'Owners can see for themselves',
-            body: 'Anyone who signs in follows their reports from received to done.',
-            so: 'So they check the app instead of chasing your team.',
-          },
-          {
-            title: 'In their own language',
-            body: 'English, Português, Español, Français, Italiano and Deutsch, chosen by each person.',
-            so: 'So the owner who lives abroad reads the same thing as the one next door.',
-          },
-          {
-            title: 'No account needed to be on record',
-            body: 'Owners you add are recognised when they write in, whether or not they ever sign in.',
-            so: 'So you can start without asking anyone to do anything.',
-          },
-        ],
+        title: 'Month end stops hurting',
+        body: 'Each building gets a clear account of what was done, without a week of paperwork.',
       },
     ],
-    startEyebrow: 'Getting started',
-    startTitle: 'Up and running without a project',
-    start: [
+    nextEyebrow: 'Finding out more',
+    nextTitle: 'The quickest way to see it is to ask',
+    next: [
       {
-        title: 'Bring your buildings',
-        body: 'Add condominiums one by one, or import them with their owners from a spreadsheet.',
+        title: 'Tell us about your company',
+        body: 'A few lines on how many buildings you manage and how you work today.',
       },
       {
-        title: 'Connect where owners write',
-        body: 'Sign in to your mailbox and scan a code for WhatsApp. New messages start arriving as jobs.',
+        title: 'We walk you through it',
+        body: 'A call with someone who knows the product, built around buildings like yours.',
       },
       {
-        title: 'Invite your team',
-        body: 'Admins see everything. Staff see the buildings you give them.',
-      },
-    ],
-    faqEyebrow: 'Questions, answered',
-    faqTitle: 'What management companies ask first',
-    faq: [
-      {
-        q: 'Do owners have to install or sign up for anything?',
-        a: 'No. They keep writing to your email address or WhatsApp number. Signing in is there for owners who want to follow progress, vote or read the reports.',
-      },
-      {
-        q: 'Does Condoclar decide things on its own?',
-        a: 'No. It suggests the building, unit, category, priority and who could take the job. A new report waits in Incoming until one of your team moves it to To do.',
-      },
-      {
-        q: 'Can staff be limited to certain buildings?',
-        a: 'Yes. Each team member covers all of your condominiums or only the ones you choose, and sees jobs, owners and vendors for those alone.',
-      },
-      {
-        q: 'We already have years of owners in a spreadsheet. Can we bring them?',
-        a: 'Yes. Import condominiums and their owners from a CSV file, check the preview, and confirm.',
-      },
-      {
-        q: 'What about the meetings, votes and accounts?',
-        a: 'They are there for each building when you want them: meetings with agendas and minutes, formal votes, budgets, fees and documents. Many companies start with jobs alone.',
-      },
-      {
-        q: 'Does it work on a phone?',
-        a: 'Yes. Everything on this page works in a phone browser, and you can dictate a list of jobs to the Concierge while you walk a building.',
+        title: 'You decide',
+        body: 'There is no commitment. If it fits, we help you get started.',
       },
     ],
     cta: {
       title: 'See your own buildings on one board.',
-      body: 'Tell us how many buildings you manage and we will show you how they would look.',
+      body: 'Tell us how many buildings you manage and we will arrange a call to show you how it would work for you.',
       button: 'Book a demo',
     },
     demo: {
@@ -595,7 +468,7 @@ const en: Copy = {
       company: 'Company',
       buildings: 'Buildings managed',
       message: 'Anything we should know?',
-      messagePlaceholder: 'For example, how owners contact you today',
+      messagePlaceholder: 'For example, a phone number and a good time to call',
       submit: 'Request a demo',
       note: 'We only use these details to reply to you.',
       sentTitle: 'Thank you, we have your request',

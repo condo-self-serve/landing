@@ -34,23 +34,17 @@ export interface CompanyCopy {
   heroLede: string;
   heroAlt: string;
   ctaPrimary: string;
-  ctaSecondary: string;
-  /** Accessible name of the explainer video, and the line under it. */
-  videoLabel: string;
-  videoCaption: string;
   painEyebrow: string;
   painTitle: string;
   pains: { kicker: string; title: string; body: string }[];
-  howEyebrow: string;
-  howTitle: string;
-  steps: { title: string; body: string }[];
-  clusters: ClusterCopy[];
-  startEyebrow: string;
-  startTitle: string;
-  start: { title: string; body: string }[];
-  faqEyebrow: string;
-  faqTitle: string;
-  faq: { q: string; a: string }[];
+  /** What changes for the company: outcomes only, never how the product does it. */
+  outcomesEyebrow: string;
+  outcomesTitle: string;
+  outcomes: { title: string; body: string }[];
+  /** What happens after someone asks for a demo. */
+  nextEyebrow: string;
+  nextTitle: string;
+  next: { title: string; body: string }[];
   cta: CtaCopy;
   /** The "Book a demo" form. */
   demo: {

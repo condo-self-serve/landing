@@ -603,17 +603,6 @@ h3 {
   box-shadow: 0 32px 80px rgba(14, 42, 71, 0.22);
 }
 
-.app-showcase video {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  background: var(--navy);
-  border-radius: 14px;
-  border: 1px solid rgba(14, 42, 71, 0.12);
-  box-shadow: 0 32px 80px rgba(14, 42, 71, 0.22);
-}
-
 .app-showcase figcaption {
   text-align: center;
   margin-top: 18px;
